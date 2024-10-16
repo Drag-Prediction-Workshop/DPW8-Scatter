@@ -9,6 +9,7 @@ Created on Tue Aug 20 10:28:19 2024
 import os
 import sys
 import re
+from pathlib import PurePath
 
 
 def exception_handler(exception_type, exception, traceback):
@@ -62,7 +63,7 @@ def parse_tecplot_file(filename):
             elif line.upper().startswith('DATASETAUXDATA'):
                 key, value = line[14:].strip().split('=')
                 key = key.strip().upper()
-                value = value.strip()
+                value = value.strip().strip('"')
                 aux[key] = value
             elif line.upper().startswith('AUXDATA'):
                 key, value = line[7:].strip().split('=')
@@ -88,45 +89,68 @@ def parse_tecplot_file(filename):
     return dict(title=title, variables=variables, aux=aux, zones=zones)
 
 
-# Checks the ONERA OAT15A submission file
-def check_oat15a_file(filename):
-    # filename contains the entire path, get the basename for checking
-    basename = os.path.basename(filename)
-
-    # Try grabbing the full id, with participant id and suffix, from the file name
+def get_id_from_path(path):
+    # get the participant ID from the directory structure
     try:
-        full_id = basename.split('_')[1][:-4]
+        pid = path.parts[-3].split('_')[0]
+        if not pid.isnumeric():
+            raise RuntimeError(f"Participant id must be numeric, found {pid}")
     except:
-        raise RuntimeError(f"Could not parse participant id from '{filename}' filename must be of "
-                           "the form 'OAT15A_[participant id with suffix].dat")
+        raise RuntimeError(f"Could not parse participant id from '{filename}'. File must be in "
+                            "directory structure of the form 'TestCase1a/[participant_id]_"
+                            "[participant_info]/[submission_id]_[submission_info]/[filename].dat")
 
-    # Try splitting the full id into participant id and suffix
+    # get the submission ID from the directory structure
     try:
-        pid, suffix = full_id.split('.')
+        subid = path.parts[-2].split('_')[0]
+        if not subid.isnumeric():
+            raise RuntimeError(f"Submission id must be numeric, found {subid}")
     except:
-        raise RuntimeError(f"Unable to parse participant id and suffix from '{filename}'")
+        raise RuntimeError(f"Could not parse submission id from '{filename}'. File must be in "
+                            "directory structure of the form 'TestCase1a/[participant_id]_"
+                            "[participant_info]/[submission_id]_[submission_info]/[filename].dat")
 
-    if not (pid.isnumeric() and suffix.isnumeric()):
-        raise RuntimeError(f"Participant id and suffix must be numeric, found {pid}.{suffix}")
+    return f'{pid}.{subid}'
+
+
+# Checks the ONERA OAT15A force and moment submission file
+def check_TestCase1a_ForceMoment_file(filename):
+    # PurePath can be used to get all parts of the file path
+    path = PurePath(filename)
+
+    # check the actual file name
+    valid_name = 'DPW8-AePW4_ForceMoment_v4.dat'
+    if path.part[-1] != valid_name:
+        raise RuntimeError(f"Filename provided '{path.part[-1]}' does not match valid file name "
+                           f"'{valid_name}'")
+
+    # build the full id from the participant and submission ids
+    full_id = get_id_from_path(path)
 
     # Read the tecplot file and check the data inside
     data = parse_tecplot_file(filename)
     if data['title'] != full_id:
-        RuntimeError(f"Title inside '{filename}' does not match participant id and suffix")
+        raise RuntimeError(f"Title inside '{filename}' does not match participant and submission "
+                           f"ids, found {data['title']}, expected {full_id}")
 
     # More checks here...
+    # potential checks:
+    #   - Valid data for required variables like CD, CL, CM
 
 
 # Checks file name and spawns additional checks based on the file type
 def check_file(filename):
-    if not filename.endswith('.dat'):
-        raise RuntimeError(f"Only .dat files can be submitted, found '{filename}'")
+    if not filename.endswith('.dat') and not filename.endswith('.md'):
+        raise RuntimeError(f"Only .dat and .md files can be submitted, found '{filename}'")
 
-    # filename contains the entire path, get the basename for checking
-    basename = os.path.basename(filename)
-    if basename.startswith('OAT15A'):
-        check_oat15a_file(filename)
-        return
+    # check which test case this submission belongs to
+    if 'TestCase1a' in filename:
+
+        # filename contains the entire path, get the basename for checking
+        basename = os.path.basename(filename)
+        if 'ForceMoment' in basename:
+            check_TestCase1a_ForceMoment_file(filename)
+            return
 
     raise RuntimeError(f"Filename '{filename}' does not match any accepted filenames for Scatter "
                        "Working Group.")
