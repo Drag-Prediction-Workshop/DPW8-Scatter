@@ -140,7 +140,7 @@ def check_TestCase1a_ForceMoment_file(filename):
 
 # Checks file name and spawns additional checks based on the file type
 def check_file(filename):
-    if not filename.endswith('.dat') and not filename.endswith('.md'):
+    if not filename.endswith('.dat') and not filename.endswith('.md') and not 'gitignore' in filename:
         raise RuntimeError(f"Only .dat and .md files can be submitted, found '{filename}'")
 
     # Check to see if FeCFD or StarkIndustries were included in directory names. These were given
