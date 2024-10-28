@@ -119,7 +119,7 @@ def check_TestCase1a_ForceMoment_file(filename):
     path = PurePath(filename)
 
     # check the actual file name
-    valid_name = 'DPW8-AePW4_ForceMoment_v4.dat'
+    valid_name = 'DPW8-AePW4_ForceMoment_v5.dat'
     if path.part[-1] != valid_name:
         raise RuntimeError(f"Filename provided '{path.part[-1]}' does not match valid file name "
                            f"'{valid_name}'")
@@ -142,6 +142,18 @@ def check_TestCase1a_ForceMoment_file(filename):
 def check_file(filename):
     if not filename.endswith('.dat') and not filename.endswith('.md'):
         raise RuntimeError(f"Only .dat and .md files can be submitted, found '{filename}'")
+
+    # Check to see if FeCFD or StarkIndustries were included in directory names. These were given
+    # as examples in the github instructions.
+    if 'starkindustries' in filename.lower():
+        raise RuntimeError("StarkIndustries should not be included in your directory structure. "
+                           "This was an example organization name, so replace it with your own "
+                           "organization.")
+
+    if 'fecfd' in filename.lower():
+        raise RuntimeError("FeCFD (Iron CFD) should not be included in your directory structure. "
+                           "This was an example solver name, so replace it with your own "
+                           "solver.")
 
     # check which test case this submission belongs to
     if 'TestCase1a' in filename:
