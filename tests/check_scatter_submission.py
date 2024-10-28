@@ -96,7 +96,7 @@ def get_id_from_path(path):
         if not pid.isnumeric():
             raise RuntimeError(f"Participant id must be numeric, found {pid}")
     except:
-        raise RuntimeError(f"Could not parse participant id from '{filename}'. File must be in "
+        raise RuntimeError(f"Could not parse participant id from '{path}'. File must be in "
                             "directory structure of the form 'TestCase1a/[participant_id]_"
                             "[participant_info]/[submission_id]_[submission_info]/[filename].dat")
 
@@ -106,7 +106,7 @@ def get_id_from_path(path):
         if not subid.isnumeric():
             raise RuntimeError(f"Submission id must be numeric, found {subid}")
     except:
-        raise RuntimeError(f"Could not parse submission id from '{filename}'. File must be in "
+        raise RuntimeError(f"Could not parse submission id from '{path}'. File must be in "
                             "directory structure of the form 'TestCase1a/[participant_id]_"
                             "[participant_info]/[submission_id]_[submission_info]/[filename].dat")
 
@@ -120,7 +120,7 @@ def check_TestCase1a_ForceMoment_file(filename):
 
     # check the actual file name
     valid_name = 'DPW8-AePW4_ForceMoment_v5.dat'
-    if path.part[-1] != valid_name:
+    if path.parts[-1] != valid_name:
         raise RuntimeError(f"Filename provided '{path.part[-1]}' does not match valid file name "
                            f"'{valid_name}'")
 
