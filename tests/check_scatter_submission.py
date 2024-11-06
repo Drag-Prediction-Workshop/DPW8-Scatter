@@ -96,7 +96,7 @@ def get_id_from_path(path):
         if not pid.isnumeric():
             raise RuntimeError(f"Participant id must be numeric, found {pid}")
     except:
-        raise RuntimeError(f"Could not parse participant id from '{filename}'. File must be in "
+        raise RuntimeError(f"Could not parse participant id from '{path}'. File must be in "
                             "directory structure of the form 'TestCase1a/[participant_id]_"
                             "[participant_info]/[submission_id]_[submission_info]/[filename].dat")
 
@@ -106,7 +106,7 @@ def get_id_from_path(path):
         if not subid.isnumeric():
             raise RuntimeError(f"Submission id must be numeric, found {subid}")
     except:
-        raise RuntimeError(f"Could not parse submission id from '{filename}'. File must be in "
+        raise RuntimeError(f"Could not parse submission id from '{path}'. File must be in "
                             "directory structure of the form 'TestCase1a/[participant_id]_"
                             "[participant_info]/[submission_id]_[submission_info]/[filename].dat")
 
@@ -119,8 +119,8 @@ def check_TestCase1a_ForceMoment_file(filename):
     path = PurePath(filename)
 
     # check the actual file name
-    valid_name = 'DPW8-AePW4_ForceMoment_v4.dat'
-    if path.part[-1] != valid_name:
+    valid_name = 'DPW8-AePW4_ForceMoment_v5.dat'
+    if path.parts[-1] != valid_name:
         raise RuntimeError(f"Filename provided '{path.part[-1]}' does not match valid file name "
                            f"'{valid_name}'")
 
@@ -140,8 +140,25 @@ def check_TestCase1a_ForceMoment_file(filename):
 
 # Checks file name and spawns additional checks based on the file type
 def check_file(filename):
-    if not filename.endswith('.dat') and not filename.endswith('.md'):
-        raise RuntimeError(f"Only .dat and .md files can be submitted, found '{filename}'")
+    # ignore .gitignore and markdown files
+    if filename.endswith('.md') or 'gitignore' in filename:
+        return
+
+    # only .dat files should be in submission folder (other than the .md and .gitignore files)
+    if not filename.endswith('.dat'):
+        raise RuntimeError(f"Only .dat files can be submitted, found '{filename}'")
+
+    # Check to see if FeCFD or StarkIndustries were included in directory names. These were given
+    # as examples in the github instructions.
+    if 'starkindustries' in filename.lower():
+        raise RuntimeError("StarkIndustries should not be included in your directory structure. "
+                           "This was an example organization name, so replace it with your own "
+                           "organization.")
+
+    if 'fecfd' in filename.lower():
+        raise RuntimeError("FeCFD (Iron CFD) should not be included in your directory structure. "
+                           "This was an example solver name, so replace it with your own "
+                           "solver.")
 
     # check which test case this submission belongs to
     if 'TestCase1a' in filename:
