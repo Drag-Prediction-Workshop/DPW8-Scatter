@@ -6,7 +6,7 @@ Q = 1
 
 #The range of refinement levels to generate
 refmin = 1
-refmax = 7
+refmax = 6
 
 #Set to True for triangle grids, and False for qauds
 TriFlag=False
