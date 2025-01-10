@@ -121,8 +121,56 @@ def check_TestCase1a_ForceMoment_file(filename):
     # check the actual file name
     valid_name = 'DPW8-AePW4_ForceMoment_v5.dat'
     if path.parts[-1] != valid_name:
-        raise RuntimeError(f"Filename provided '{path.part[-1]}' does not match valid file name "
+        raise RuntimeError(f"Filename provided '{path.parts[-1]}' does not match valid file name "
                            f"'{valid_name}'")
+
+    # build the full id from the participant and submission ids
+    full_id = get_id_from_path(path)
+
+    # Read the tecplot file and check the data inside
+    data = parse_tecplot_file(filename)
+    if data['title'] != full_id:
+        raise RuntimeError(f"Title inside '{filename}' does not match participant and submission "
+                           f"ids, found {data['title']}, expected {full_id}")
+
+
+# Checks the ONERA OAT15A sectional cuts submission file
+def check_TestCase1a_SectionalCuts_file(filename):
+    # PurePath can be used to get all parts of the file path
+    path = PurePath(filename)
+
+    # check the actual file name
+    valid_name = 'DPW8-AePW4_SectionalCuts_v5.dat'
+    if path.parts[-1] != valid_name and \
+       not re.match(valid_name.split('.dat')[0]+'_ALPHA[0-9].[0-9][0-9]_GRID[0-9]+.dat',path.parts[-1]):
+        raise RuntimeError(f"Filename provided '{path.parts[-1]}' does not match valid file names "
+                           f"'{valid_name}' or '{valid_name.split('.dat')[0]+'_ALPHA#.##_GRID#.dat'}'")
+
+    # build the full id from the participant and submission ids
+    full_id = get_id_from_path(path)
+
+    # Read the tecplot file and check the data inside
+    data = parse_tecplot_file(filename)
+    if data['title'] != full_id:
+        raise RuntimeError(f"Title inside '{filename}' does not match participant and submission "
+                           f"ids, found {data['title']}, expected {full_id}")
+
+    # More checks here...
+    # potential checks:
+    #   - Valid data for required variables like CD, CL, CM
+
+
+# Checks the ONERA OAT15A convergence submission file
+def check_TestCase1a_Convergence_file(filename):
+    # PurePath can be used to get all parts of the file path
+    path = PurePath(filename)
+
+    # check the actual file name
+    valid_name = 'DPW8-AePW4_Convergence_v5.dat'
+    if path.parts[-1] != valid_name and \
+       not re.match(valid_name.split('.dat')[0]+'_ALPHA[0-9].[0-9][0-9]_GRID[0-9]+',path.parts[-1]):
+        raise RuntimeError(f"Filename provided '{path.parts[-1]}' does not match valid file names "
+                           f"'{valid_name}' or '{valid_name.split('.dat')[0]+'_ALPHA#.##_GRID#.dat'}'")
 
     # build the full id from the participant and submission ids
     full_id = get_id_from_path(path)
@@ -167,6 +215,14 @@ def check_file(filename):
         basename = os.path.basename(filename)
         if 'ForceMoment' in basename:
             check_TestCase1a_ForceMoment_file(filename)
+            return
+
+        if 'SectionalCuts' in basename:
+            check_TestCase1a_SectionalCuts_file(filename)
+            return
+
+        if 'Convergence' in basename:
+            check_TestCase1a_Convergence_file(filename)
             return
 
     raise RuntimeError(f"Filename '{filename}' does not match any accepted filenames for Scatter "
