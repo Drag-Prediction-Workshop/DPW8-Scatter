@@ -138,6 +138,56 @@ def check_TestCase1a_ForceMoment_file(filename):
     #   - Valid data for required variables like CD, CL, CM
 
 
+# Checks the ONERA OAT15A sectional cuts submission file
+def check_TestCase1a_SectionalCuts_file(filename):
+    # PurePath can be used to get all parts of the file path
+    path = PurePath(filename)
+
+    # check the actual file name
+    valid_name = 'DPW8-AePW4_SectionalCuts_v5.dat'
+    if path.parts[-1] != valid_name:
+        raise RuntimeError(f"Filename provided '{path.part[-1]}' does not match valid file name "
+                           f"'{valid_name}'")
+
+    # build the full id from the participant and submission ids
+    full_id = get_id_from_path(path)
+
+    # Read the tecplot file and check the data inside
+    data = parse_tecplot_file(filename)
+    if data['title'] != full_id:
+        raise RuntimeError(f"Title inside '{filename}' does not match participant and submission "
+                           f"ids, found {data['title']}, expected {full_id}")
+
+    # More checks here...
+    # potential checks:
+    #   - Valid data for required variables like CD, CL, CM
+
+
+# Checks the ONERA OAT15A convergence submission file
+def check_TestCase1a_Convergence_file(filename):
+    # PurePath can be used to get all parts of the file path
+    path = PurePath(filename)
+
+    # check the actual file name
+    valid_name = 'DPW8-AePW4_Convergence_v5.dat'
+    if path.parts[-1] != valid_name:
+        raise RuntimeError(f"Filename provided '{path.part[-1]}' does not match valid file name "
+                           f"'{valid_name}'")
+
+    # build the full id from the participant and submission ids
+    full_id = get_id_from_path(path)
+
+    # Read the tecplot file and check the data inside
+    data = parse_tecplot_file(filename)
+    if data['title'] != full_id:
+        raise RuntimeError(f"Title inside '{filename}' does not match participant and submission "
+                           f"ids, found {data['title']}, expected {full_id}")
+
+    # More checks here...
+    # potential checks:
+    #   - Valid data for required variables like CD, CL, CM
+
+
 # Checks file name and spawns additional checks based on the file type
 def check_file(filename):
     # ignore .gitignore and markdown files
@@ -167,6 +217,14 @@ def check_file(filename):
         basename = os.path.basename(filename)
         if 'ForceMoment' in basename:
             check_TestCase1a_ForceMoment_file(filename)
+            return
+
+        if 'SectionalCuts' in basename:
+            check_TestCase1a_SectionalCuts_file(filename)
+            return
+
+        if 'Convergence' in basename:
+            check_TestCase1a_Convergence_file(filename)
             return
 
     raise RuntimeError(f"Filename '{filename}' does not match any accepted filenames for Scatter "
