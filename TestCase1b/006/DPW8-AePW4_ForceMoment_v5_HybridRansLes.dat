@@ -85,7 +85,7 @@ DATASETAUXDATA Email           = "adam.jirasek.ctr@afacademy.af.edu"
 DATASETAUXDATA Institution     = "USAFA"
 DATASETAUXDATA SolverName      = "Loci/CHEM"
 DATASETAUXDATA BasicAlgorithm  = "Hybrid RANS/LES"
-DATASETAUXDATA TurbulenceModel = "Wilcox1998k-w"
+DATASETAUXDATA TurbulenceModel = "Hybrid RANS/LES"
 DATASETAUXDATA GridId          = "Multiblock, Overset, Hex, Hybrid, Prism, Custom, etc."
 DATASETAUXDATA Notes           = "Mesh size count is in terms of mesh cells count"
 #-------------------------------------------------------------------------------
