@@ -1,0 +1,181 @@
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# DPW-8/AePW-4 FORCE AND MOMENT SUBMITTAL FORM (Version 5 - October 16, 2024)
+#
+# Provide this file for steady-state or time-averaged force and moment coefficients
+#
+#
+#
+# Data Set Title XXX.YY: Replace "XXX.YY" in the zone titles with the following information
+#                     (Three-Digit Participant ID).(Two-Digit Submission ID)
+#                     XXX THREE-DIGIT PARTICIPANT ID: assigned by your working group leaders
+#                     YY   TWO-DIGIT  SUBMISSION ID:  (self assigned) label a solver/grid/computational approach
+#                     EXAMPLE: 007.02
+#
+#
+#       NOMENCLATURE:
+#         GRID_LEVEL:   Level of grid refinement (1-6)
+#          GRID_SIZE:   Number of grid nodes or cells
+#            GRIDFAC:   1/GRID_SIZE**2/3
+#               MACH:   Freestream Mach Number
+#                REY:   Chord-Based Reynolds Number
+#              ALPHA:   Angle of Attack, deg
+#                 CL:   Coefficient of Lift            (total) (L/(0.5*rho_inf*U_inf^2*A)  )              Provided to eight decimal points
+#                 CD:   Coefficient of Drag            (total) (D/(0.5*rho_inf*U_inf^2*A)  )              Provided to nine  decimal points
+#                 CM:   Coefficient of Pitching Moment (total) (M/(0.5*rho_inf*U_inf^2*A*c)) (+ nose-up)  Provided to eight decimal points
+#              CD_PR:   Surface-Pressure Integrated Drag Coefficient
+#              CD_SF:   Skin-Friction Integrated Drag Coefficient
+#              *_TOT:   Total Configuration Force/Moment
+#             *_TAIL:   Horizontal Tail Component Force/Moment
+#             *_WING:   Wing Component Force/Moment
+#              *_FUS:   Fuselage Component Force/Moment
+#              *_NAC:   Nacelle Component Force/Moment
+#               *_PY:   Pylon Component Force/Moment
+#                CPU:   CPU (or GPU) hours used
+#                 DT:   Time Step Per Iteration
+#           CTUSTART:   Convective Time Unit at Which Averaging Began
+#             CTUAVG:   Number of Convective Time Units in Time-Averaging Phase
+#                Q/E:   Dynamic Pressure / Modulus of Elasticity
+#
+#     DECIMAL POINTS:   Please provide data in at least the number of decimal points listed below (?.???????? would have at least eight decimal points)
+#
+#      OPTIONAL DATA:   Enter -999 for any optional data you are not submitting
+#
+#        DEFINITIONS:   CTU --> Convective Time Unit  (Uinf/Cref is 1.00 CTU)
+#
+#   REFERENCE VALUES: ONERA OAT15A (ONE CELL WIDE)
+#                       Planform ref area, A         =  Cref * span (span is grid dependent)
+#                       Mean aerodynamic chord, Cref =    230.00 mm
+#                       x moment center              =     57.50 mm
+#                       y moment center              =      0.00 mm
+#                       z moment center              =      0.00 mm
+#
+#   REFERENCE VALUES: Common Research Model
+#                       Planform ref area, A         = 594720.00 inches^2
+#                       Mean aerodynamic chord, Cref =    275.80 inches
+#                       Full-span length, B          =   2313.50 inches
+#                       Semi-span length, BO2        =   1156.75 inches
+#                       x moment center              =   1325.90 inches
+#                       y moment center              =      0.00 inches
+#                       z moment center              =    177.95 inches
+#                       Aspect Ratio, AR             =      9.00
+#
+#   CONFIGURATION:      ONERA OAT15A
+#                       CRMWB   (Common Research Model Wing/Body)
+#                       CRMWBNP (Common Research Model Wing/Body/Nacelle/Pylon)
+#
+#              NOTES:   1. All numerical data fields can be free-formatted.
+#                       2. Please use at least 4 decimal places for coordinate values
+#                       3. Please use at least 6 decimal places for coefficient values
+#                       4. Only include one grid type, grid size, soln method, turb model, etc per form.
+#                       5. Fill fields with value of -999 for data that are not available.
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "029.01"
+
+#                                                                                                                                                                                    +----------------------------------------------------------------------- OPTIONAL ---------------------------------------------------------------------------------------------------------------------+
+# Column     1             2            3           4       5      6         7           8            9            10            11            12            13           14           15           16           17           18          19           20          21          22           23          24          25           26          27           28        29          30         31
+VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"   "CL_TOT"    "CD_TOT"     "CM_TOT"     "CL_WING"     "CD_WING"     "CM_WING"     "CD_PR"      "CD_SF"      "CL_TAIL"    "CD_TAIL"    "CM_TAIL"    "CL_FUS"    "CD_FUS"     "CM_FUS"    "CL_NAC"    "CD_NAC"     "CM_NAC"    "CL_PY"     "CD_PY"      "CM_PY"     "CPU_Hours"  "DELTAT"  "CTUSTART"  "CTUAVG"   "Q/E"
+
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA ParticipantID   = "029"
+DATASETAUXDATA SubmissionDate  = "2025-02-23"
+DATASETAUXDATA Name            = "Marshall Galbraith"
+DATASETAUXDATA Email           = "galbramc@mit.edu"
+DATASETAUXDATA Institution     = "Massachusetts Institute of Technology"
+DATASETAUXDATA SolverName      = "SANS"
+DATASETAUXDATA BasicAlgorithm  = "RANS"
+DATASETAUXDATA TurbulenceModel = "SA-neg"
+DATASETAUXDATA GridId          = "Unstructured Adapted"
+DATASETAUXDATA Notes           = ""
+
+
+#-------------------------------------------------------------------------------
+#  REQUIRED:  VEHICLE F&M
+#  OPTIONAL:  INDIVIDUAL COMPONENT FORCES AND MOMENTS
+#
+# CREATE ZONES VARYING ALPHA WHILE HOLDING GRID LEVEL CONSTANT (LABEL: GRID LEVEL X)
+#    AND ZONES VARYING GRID LEVEL WHILE HOLDING ALPHA CONSTANT (LABEL: ALPHA X.XX)
+#-------------------------------------------------------------------------------
+
+ZONE T="029.01 GRID LEVEL 1"
+AUXDATA Tstatic         = ""
+AUXDATA Deltat          = "1e6"
+AUXDATA GridFileName    = ""
+AUXDATA Misc            = ""
+ 1  3.786000000000000227e+02  2.325506330167760697e-06  0.150000  6000000.000000  0.000000  2.259379881925999839e-02 1.338695357299999819e-02  -5.514165629095400464e-03   -999   -999  -999  5.035526591329999961e-03  8.351426981749999340e-03  -999   -999  -999   -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999 -999 -999
+
+ZONE T="029.01 GRID LEVEL 2"
+AUXDATA Tstatic         = ""
+AUXDATA Deltat          = "1e6"
+AUXDATA GridFileName    = ""
+AUXDATA Misc            = ""
+ 2  7.748999999999999773e+02  5.551207017538366771e-07  0.150000  6000000.000000  0.000000  -3.808914376559999811e-03 1.449656774349999955e-02  6.097590200699999977e-04   -999   -999  -999  4.987596453960000190e-03  9.508971289649999908e-03  -999   -999  -999   -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999 -999 -999
+
+ZONE T="029.01 GRID LEVEL 3"
+AUXDATA Tstatic         = ""
+AUXDATA Deltat          = "1e6"
+AUXDATA GridFileName    = ""
+AUXDATA Misc            = ""
+ 3  1.523200000000000045e+03  1.436696001930183677e-07  0.150000  6000000.000000  0.000000  -1.101526348404999970e-03 1.092810513560000044e-02  3.868388905968000004e-04   -999   -999  -999  2.913916140739999851e-03  8.014188994860000151e-03  -999   -999  -999   -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999 -999 -999
+
+ZONE T="029.01 GRID LEVEL 4"
+AUXDATA Tstatic         = ""
+AUXDATA Deltat          = "1e6"
+AUXDATA GridFileName    = ""
+AUXDATA Misc            = ""
+ 4  2.926500000000000000e+03  3.892079372303342350e-08  0.150000  6000000.000000  0.000000  -7.933334782092001190e-04 8.479106422379999175e-03  2.010998589891999674e-04   -999   -999  -999  1.724018562499999825e-03  6.755087859900000061e-03  -999   -999  -999   -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999 -999 -999
+
+ZONE T="029.01 GRID LEVEL 5"
+AUXDATA Tstatic         = ""
+AUXDATA Deltat          = "1e6"
+AUXDATA GridFileName    = ""
+AUXDATA Misc            = ""
+ 5  5.750000000000000000e+03  1.008191556395715175e-08  0.150000  6000000.000000  0.000000  1.098431358848000062e-04 8.059289739159999563e-03  -1.185705737809999618e-05   -999   -999  -999  1.402580193269999890e-03  6.656709545859999799e-03  -999   -999  -999   -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999 -999 -999
+
+ZONE T="029.01 GRID LEVEL 6"
+AUXDATA Tstatic         = ""
+AUXDATA Deltat          = "1e6"
+AUXDATA GridFileName    = ""
+AUXDATA Misc            = ""
+ 6  1.137510000000000036e+04  2.576133105507117915e-09  0.150000  6000000.000000  0.000000  -3.588226927480000377e-04 7.949467635340001087e-03  8.370242142460000245e-05   -999   -999  -999  1.303744360499999987e-03  6.645723274849998745e-03  -999   -999  -999   -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999 -999 -999
+
+ZONE T="029.01 GRID LEVEL 7"
+AUXDATA Tstatic         = ""
+AUXDATA Deltat          = "1e6"
+AUXDATA GridFileName    = ""
+AUXDATA Misc            = ""
+ 7  2.264209999999999854e+04  6.501975623996208438e-10  0.150000  6000000.000000  0.000000  -2.921403758849999563e-05 7.916234847229999122e-03  8.624925170243999523e-06   -999   -999  -999  1.264558838690000089e-03  6.651676008559999527e-03  -999   -999  -999   -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999 -999 -999
+
+ZONE T="029.01 GRID LEVEL 8"
+AUXDATA Tstatic         = ""
+AUXDATA Deltat          = "1e6"
+AUXDATA GridFileName    = ""
+AUXDATA Misc            = ""
+ 8  4.507869999999999709e+04  1.640347945200402208e-10  0.150000  6000000.000000  0.000000  -5.311841604019999389e-05 7.907227319980000141e-03  1.051974711278999974e-05   -999   -999  -999  1.247766643809999866e-03  6.659460676190000553e-03  -999   -999  -999   -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999 -999 -999
+
+ZONE T="029.01 GRID LEVEL 9"
+AUXDATA Tstatic         = ""
+AUXDATA Deltat          = "1e6"
+AUXDATA GridFileName    = ""
+AUXDATA Misc            = ""
+ 9  9.007739999999999418e+04  4.108157268553532058e-11  0.150000  6000000.000000  0.000000  -2.700776315427000018e-05 7.906634606680000565e-03  5.655420874019999515e-06   -999   -999  -999  1.240255265510000057e-03  6.666379341179999238e-03  -999   -999  -999   -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999 -999 -999
+
+ZONE T="029.01 ALPHA 0.00"
+AUXDATA Tstatic         = ""
+AUXDATA Deltat          = "1e6"
+AUXDATA GridFileName    = ""
+AUXDATA Misc            = ""
+ 1  3.786000000000000227e+02  2.325506330167760697e-06  0.150000  6000000.000000  0.000000  2.259379881925999839e-02 1.338695357299999819e-02  -5.514165629095400464e-03   -999   -999  -999  5.035526591329999961e-03  8.351426981749999340e-03  -999   -999  -999   -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999 -999 -999
+ 2  7.748999999999999773e+02  5.551207017538366771e-07  0.150000  6000000.000000  0.000000  -3.808914376559999811e-03 1.449656774349999955e-02  6.097590200699999977e-04   -999   -999  -999  4.987596453960000190e-03  9.508971289649999908e-03  -999   -999  -999   -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999 -999 -999
+ 3  1.523200000000000045e+03  1.436696001930183677e-07  0.150000  6000000.000000  0.000000  -1.101526348404999970e-03 1.092810513560000044e-02  3.868388905968000004e-04   -999   -999  -999  2.913916140739999851e-03  8.014188994860000151e-03  -999   -999  -999   -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999 -999 -999
+ 4  2.926500000000000000e+03  3.892079372303342350e-08  0.150000  6000000.000000  0.000000  -7.933334782092001190e-04 8.479106422379999175e-03  2.010998589891999674e-04   -999   -999  -999  1.724018562499999825e-03  6.755087859900000061e-03  -999   -999  -999   -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999 -999 -999
+ 5  5.750000000000000000e+03  1.008191556395715175e-08  0.150000  6000000.000000  0.000000  1.098431358848000062e-04 8.059289739159999563e-03  -1.185705737809999618e-05   -999   -999  -999  1.402580193269999890e-03  6.656709545859999799e-03  -999   -999  -999   -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999 -999 -999
+ 6  1.137510000000000036e+04  2.576133105507117915e-09  0.150000  6000000.000000  0.000000  -3.588226927480000377e-04 7.949467635340001087e-03  8.370242142460000245e-05   -999   -999  -999  1.303744360499999987e-03  6.645723274849998745e-03  -999   -999  -999   -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999 -999 -999
+ 7  2.264209999999999854e+04  6.501975623996208438e-10  0.150000  6000000.000000  0.000000  -2.921403758849999563e-05 7.916234847229999122e-03  8.624925170243999523e-06   -999   -999  -999  1.264558838690000089e-03  6.651676008559999527e-03  -999   -999  -999   -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999 -999 -999
+ 8  4.507869999999999709e+04  1.640347945200402208e-10  0.150000  6000000.000000  0.000000  -5.311841604019999389e-05 7.907227319980000141e-03  1.051974711278999974e-05   -999   -999  -999  1.247766643809999866e-03  6.659460676190000553e-03  -999   -999  -999   -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999 -999 -999
+ 9  9.007739999999999418e+04  4.108157268553532058e-11  0.150000  6000000.000000  0.000000  -2.700776315427000018e-05 7.906634606680000565e-03  5.655420874019999515e-06   -999   -999  -999  1.240255265510000057e-03  6.666379341179999238e-03  -999   -999  -999   -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999 -999 -999
