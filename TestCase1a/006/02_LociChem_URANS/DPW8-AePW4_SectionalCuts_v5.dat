@@ -78,7 +78,7 @@ DATASETAUXDATA Notes           = "Any thing else you would like to add"
 
 006.02 - ALPHA 1.36 - GRID 1 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 1.36 - GRID 1 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 1.36 - GRID 1 - WING SECTION  1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -514,7 +514,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 1.50 - GRID 1 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 1.50 - GRID 1 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 1.50 - GRID 1 - WING SECTION  1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -950,7 +950,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 2.50 - GRID 1 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 2.50 - GRID 1 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 2.50 - GRID 1 - WING SECTION  1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -1386,7 +1386,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.00 - GRID 1 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.00 - GRID 1 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.00 - GRID 1 - WING SECTION  1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -1822,7 +1822,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.10 - GRID 1 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.10 - GRID 1 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.10 - GRID 1 - WING SECTION  1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -2258,7 +2258,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.25 - GRID 1 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.25 - GRID 1 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.25 - GRID 1 - WING SECTION  1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -2694,7 +2694,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.40 - GRID 1 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.40 - GRID 1 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.40 - GRID 1 - WING SECTION  1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -3130,7 +3130,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.50 - GRID 1 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.50 - GRID 1 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.50 - GRID 1 - WING SECTION  1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -3566,7 +3566,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.60 - GRID 1 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.60 - GRID 1 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.60 - GRID 1 - WING SECTION  1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -4002,7 +4002,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.90 - GRID 1 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.90 - GRID 1 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.90 - GRID 1 - WING SECTION  1"
 AUXDATA GridLevel       = "1"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -4438,7 +4438,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 1.36 - GRID 2 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 1.36 - GRID 2 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 1.36 - GRID 2 - WING SECTION  1"
 AUXDATA GridLevel       = "2"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -5003,7 +5003,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 1.50 - GRID 2 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 1.50 - GRID 2 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 1.50 - GRID 2 - WING SECTION  1"
 AUXDATA GridLevel       = "2"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -5568,7 +5568,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 2.50 - GRID 2 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 2.50 - GRID 2 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 2.50 - GRID 2 - WING SECTION  1"
 AUXDATA GridLevel       = "2"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -6133,7 +6133,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.00 - GRID 2 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.00 - GRID 2 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.00 - GRID 2 - WING SECTION  1"
 AUXDATA GridLevel       = "2"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -6698,7 +6698,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.10 - GRID 2 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.10 - GRID 2 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.10 - GRID 2 - WING SECTION  1"
 AUXDATA GridLevel       = "2"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -7263,7 +7263,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.25 - GRID 2 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.25 - GRID 2 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.25 - GRID 2 - WING SECTION  1"
 AUXDATA GridLevel       = "2"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -7828,7 +7828,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.40 - GRID 2 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.40 - GRID 2 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.40 - GRID 2 - WING SECTION  1"
 AUXDATA GridLevel       = "2"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -8393,7 +8393,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.50 - GRID 2 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.50 - GRID 2 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.50 - GRID 2 - WING SECTION  1"
 AUXDATA GridLevel       = "2"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -8958,7 +8958,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.60 - GRID 2 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.60 - GRID 2 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.60 - GRID 2 - WING SECTION  1"
 AUXDATA GridLevel       = "2"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -9523,7 +9523,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.90 - GRID 2 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.90 - GRID 2 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.90 - GRID 2 - WING SECTION  1"
 AUXDATA GridLevel       = "2"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -10088,7 +10088,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 1.36 - GRID 3 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 1.36 - GRID 3 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 1.36 - GRID 3 - WING SECTION  1"
 AUXDATA GridLevel       = "3"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -10780,7 +10780,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 1.50 - GRID 3 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 1.50 - GRID 3 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 1.50 - GRID 3 - WING SECTION  1"
 AUXDATA GridLevel       = "3"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -11472,7 +11472,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 2.50 - GRID 3 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 2.50 - GRID 3 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 2.50 - GRID 3 - WING SECTION  1"
 AUXDATA GridLevel       = "3"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -12164,7 +12164,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.00 - GRID 3 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.00 - GRID 3 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.00 - GRID 3 - WING SECTION  1"
 AUXDATA GridLevel       = "3"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -12856,7 +12856,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.10 - GRID 3 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.10 - GRID 3 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.10 - GRID 3 - WING SECTION  1"
 AUXDATA GridLevel       = "3"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -13548,7 +13548,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.25 - GRID 3 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.25 - GRID 3 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.25 - GRID 3 - WING SECTION  1"
 AUXDATA GridLevel       = "3"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -14240,7 +14240,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.40 - GRID 3 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.40 - GRID 3 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.40 - GRID 3 - WING SECTION  1"
 AUXDATA GridLevel       = "3"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -14932,7 +14932,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.50 - GRID 3 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.50 - GRID 3 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.50 - GRID 3 - WING SECTION  1"
 AUXDATA GridLevel       = "3"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -15624,7 +15624,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.60 - GRID 3 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.60 - GRID 3 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.60 - GRID 3 - WING SECTION  1"
 AUXDATA GridLevel       = "3"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -16316,7 +16316,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.90 - GRID 3 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.90 - GRID 3 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.90 - GRID 3 - WING SECTION  1"
 AUXDATA GridLevel       = "3"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -17008,7 +17008,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 1.36 - GRID 4 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 1.36 - GRID 4 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 1.36 - GRID 4 - WING SECTION  1"
 AUXDATA GridLevel       = "4"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -17829,7 +17829,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 1.50 - GRID 4 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 1.50 - GRID 4 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 1.50 - GRID 4 - WING SECTION  1"
 AUXDATA GridLevel       = "4"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -18650,7 +18650,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 2.50 - GRID 4 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 2.50 - GRID 4 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 2.50 - GRID 4 - WING SECTION  1"
 AUXDATA GridLevel       = "4"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -19471,7 +19471,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.00 - GRID 4 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.00 - GRID 4 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.00 - GRID 4 - WING SECTION  1"
 AUXDATA GridLevel       = "4"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -20292,7 +20292,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.10 - GRID 4 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.10 - GRID 4 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.10 - GRID 4 - WING SECTION  1"
 AUXDATA GridLevel       = "4"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -21113,7 +21113,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.25 - GRID 4 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.25 - GRID 4 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.25 - GRID 4 - WING SECTION  1"
 AUXDATA GridLevel       = "4"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -21934,7 +21934,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.40 - GRID 4 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.40 - GRID 4 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.40 - GRID 4 - WING SECTION  1"
 AUXDATA GridLevel       = "4"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -22755,7 +22755,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.50 - GRID 4 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.50 - GRID 4 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.50 - GRID 4 - WING SECTION  1"
 AUXDATA GridLevel       = "4"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -23576,7 +23576,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.60 - GRID 4 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.60 - GRID 4 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.60 - GRID 4 - WING SECTION  1"
 AUXDATA GridLevel       = "4"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -24397,7 +24397,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.90 - GRID 4 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.90 - GRID 4 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.90 - GRID 4 - WING SECTION  1"
 AUXDATA GridLevel       = "4"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -25218,7 +25218,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 1.36 - GRID 5 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 1.36 - GRID 5 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 1.36 - GRID 5 - WING SECTION  1"
 AUXDATA GridLevel       = "5"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -26165,7 +26165,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 1.50 - GRID 5 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 1.50 - GRID 5 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 1.50 - GRID 5 - WING SECTION  1"
 AUXDATA GridLevel       = "5"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -27112,7 +27112,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 2.50 - GRID 5 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 2.50 - GRID 5 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 2.50 - GRID 5 - WING SECTION  1"
 AUXDATA GridLevel       = "5"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -28059,7 +28059,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.00 - GRID 5 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.00 - GRID 5 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.00 - GRID 5 - WING SECTION  1"
 AUXDATA GridLevel       = "5"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -29006,7 +29006,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.10 - GRID 5 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.10 - GRID 5 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.10 - GRID 5 - WING SECTION  1"
 AUXDATA GridLevel       = "5"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -29953,7 +29953,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.25 - GRID 5 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.25 - GRID 5 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.25 - GRID 5 - WING SECTION  1"
 AUXDATA GridLevel       = "5"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -30900,7 +30900,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.40 - GRID 5 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.40 - GRID 5 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.40 - GRID 5 - WING SECTION  1"
 AUXDATA GridLevel       = "5"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -31847,7 +31847,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.50 - GRID 5 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.50 - GRID 5 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.50 - GRID 5 - WING SECTION  1"
 AUXDATA GridLevel       = "5"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -32794,7 +32794,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.60 - GRID 5 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.60 - GRID 5 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.60 - GRID 5 - WING SECTION  1"
 AUXDATA GridLevel       = "5"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -33741,7 +33741,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.90 - GRID 5 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.90 - GRID 5 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.90 - GRID 5 - WING SECTION  1"
 AUXDATA GridLevel       = "5"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -34688,7 +34688,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 1.36 - GRID 6 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 1.36 - GRID 6 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 1.36 - GRID 6 - WING SECTION  1"
 AUXDATA GridLevel       = "6"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -35764,7 +35764,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 1.50 - GRID 6 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 1.50 - GRID 6 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 1.50 - GRID 6 - WING SECTION  1"
 AUXDATA GridLevel       = "6"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -36840,7 +36840,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 2.50 - GRID 6 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 2.50 - GRID 6 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 2.50 - GRID 6 - WING SECTION  1"
 AUXDATA GridLevel       = "6"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -37916,7 +37916,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.00 - GRID 6 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.00 - GRID 6 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.00 - GRID 6 - WING SECTION  1"
 AUXDATA GridLevel       = "6"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -38992,7 +38992,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.10 - GRID 6 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.10 - GRID 6 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.10 - GRID 6 - WING SECTION  1"
 AUXDATA GridLevel       = "6"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -40068,7 +40068,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.25 - GRID 6 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.25 - GRID 6 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.25 - GRID 6 - WING SECTION  1"
 AUXDATA GridLevel       = "6"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -41144,7 +41144,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.40 - GRID 6 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.40 - GRID 6 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.40 - GRID 6 - WING SECTION  1"
 AUXDATA GridLevel       = "6"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -42220,7 +42220,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.50 - GRID 6 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.50 - GRID 6 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.50 - GRID 6 - WING SECTION  1"
 AUXDATA GridLevel       = "6"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -43296,7 +43296,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.60 - GRID 6 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.60 - GRID 6 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.60 - GRID 6 - WING SECTION  1"
 AUXDATA GridLevel       = "6"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
@@ -44372,7 +44372,7 @@ AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unst
 
 006.02 - ALPHA 3.90 - GRID 6 - WING SECTION  1
 
-ZONE T="006.01 - ALPHA 3.90 - GRID 6 - WING SECTION  1"
+ZONE T="006.02 - ALPHA 3.90 - GRID 6 - WING SECTION  1"
 AUXDATA GridLevel       = "6"
 AUXDATA Mach            = "0.73"
 AUXDATA Re              = "3000000"
