@@ -9,6 +9,7 @@ from ebg import writeEBG
 from geo import writeGEO
 from curve import writeCurve
 from ugrid import writeUGRID2D
+from ugrid import writeUGRID3D
 from csm import writeCSM
 from segment import writeSegment
 try:
@@ -52,10 +53,10 @@ def make_joukowski(ref, Q, TriFlag, Distribution, FileFormat, reynolds, filename
         writeNMF(filename_base + '_ref'+str(ref)+ '_Q'+str(Q), XC, nLE, nWK, nWB, nr, 'z')
         writePlot3Dxy(filename_base + '_ref'+str(ref)+ '_Q'+str(Q), XC, YC)
     if FileFormat == 'p3dxz':
-        writeNMF(filename_base + '_ref'+str(ref)+ '_Q'+str(Q)+'.nmf', XC, nLE, nWK, nWB, nr, 'y')
+        writeNMF(filename_base + '_ref'+str(ref)+ '_Q'+str(Q), XC, nLE, nWK, nWB, nr, 'y')
         writePlot3Dxz(filename_base + '_ref'+str(ref)+ '_Q'+str(Q)+'.p3d.x', XC, YC)
     if FileFormat == 'in':
-        writeOVERFLOW('grid.in.'+str(ref), XC, YC)
+        writeOVERFLOW('grid.in.'+filename_base+'_ref'+str(ref), XC, YC)
     if FileFormat == 'hypgen':
         writePlot2D('joukowski_c.crv', XC[:,0:1], YC[:,0:1])
     if FileFormat == 'ebg':
@@ -113,6 +114,9 @@ def make_joukowski(ref, Q, TriFlag, Distribution, FileFormat, reynolds, filename
     if FileFormat == 'ugrid':
         assert(Q == 1)
         writeUGRID2D(filename_base, ref, Q, TriFlag, E, V, nLE, NC, nWK, nWB, nr);
+    if FileFormat == 'ugrid3d':
+        assert(Q == 1)
+        writeUGRID3D(filename_base, ref, Q, TriFlag, E, V, nLE, NC, nWK, nWB, nr);
 
     print("Done with refinement " + str(ref))
 
