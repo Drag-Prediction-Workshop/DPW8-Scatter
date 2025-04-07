@@ -1,0 +1,105 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# DPW-8/AePW-4 FORCE AND MOMENT SUBMITTAL FORM (Version 2 - July 29, 2024)
+#
+# Provide this file for steady-state or time-averaged force and moment coefficients
+#
+#
+#
+# Data Set Title XXX: Replace "XXX" in the zone titles with the following information
+#                     (Three-Digit Participant ID).(Suffix)
+#                     THREE-DIGIT PARTICIPANT ID: assigned by your working group leaders
+#                     SUFFIX:  Data set number. Each unique submission by a user will
+#                              use a different number. For instance, if solutions are
+#                              being submitted with multiple grids, turbulence models,
+#                              schemes, etc. For instance, you may include a ".1" and
+#                              and a ".2" if two turbulence models are being submitted.
+#                     EXAMPLE: 001.1
+#
+# 
+#       NOMENCLATURE:
+#         GRID_LEVEL:   Level of grid refinement (1-6)
+#          GRID_SIZE:   Number of grid nodes or cells
+#            GRIDFAC:   1/GRID_SIZE**2/3
+#               MACH:   Freestream Mach Number
+#                REY:   Chord-Based Reynolds Number
+#              ALPHA:   Angle of Attack, deg
+#                 CL:   Coefficient of Lift            (total) (L/(0.5*rho_inf*U_inf^2*A)  )              Provided to five decimal points
+#                 CD:   Coefficient of Drag            (total) (D/(0.5*rho_inf*U_inf^2*A)  )              Provided to six  decimal points
+#                 CM:   Coefficient of Pitching Moment (total) (M/(0.5*rho_inf*U_inf^2*A*c)) (+ nose-up)  Provided to five decimal points
+#              CD_PR:   Surface-Pressure Integrated Drag Coefficient
+#              CD_SF:   Skin-Friction Integrated Drag Coefficient
+#          CD-CL2/PA:   CD_TOT - (CL_TOT*CL_TOT)/(PI*AR)
+#              *_TOT:   Total Configuration Force/Moment
+#             *_TAIL:   Horizontal Tail Component Force/Moment
+#             *_WING:   Wing Component Force/Moment
+#              *_FUS:   Fuselage Component Force/Moment
+#              *_NAC:   Nacelle Component Force/Moment
+#               *_PY:   Pylon Component Force/Moment
+#                CPU:   CPU (or GPU) hours used
+#                 DT:   Time Step Per Iteration
+#           CTUSTART:   Convective Time Unit at Which Averaging Began
+#             CTUAVG:   Number of Convective Time Units in Time-Averaging Phase
+#                Q/E:   Dynamic Pressure / Modulus of Elasticity
+#
+#      OPTIONAL DATA:   Enter -999 for any optional data you are not submitting
+#
+#   REFERENCE VALUES: ONERA OAT15A (ONE CELL WIDE)
+#                       Planform ref area, A         =  Cref * span (span is grid dependent)
+#                       Mean aerodynamic chord, Cref =    230.00 mm
+#                       x moment center              =     57.50 mm
+#                       y moment center              =      0.00 mm
+#                       z moment center              =      0.00 mm
+#
+#   REFERENCE VALUES: Common Research Model
+#                       Planform ref area, A         = 594720.00 inches^2
+#                       Mean aerodynamic chord, Cref =    275.80 inches
+#                       Full-span length, B          =   2313.50 inches
+#                       Semi-span length, BO2        =   1156.75 inches
+#                       x moment center              =   1325.90 inches
+#                       y moment center              =      0.00 inches
+#                       z moment center              =    177.95 inches
+#                       Aspect Ratio, AR             =      9.00
+#
+#   CONFIGURATION:      ONERA OAT15A
+#                       CRMWB   (Common Research Model Wing/Body)
+#                       CRMWBNP (Common Research Model Wing/Body/Nacelle/Pylon)
+#
+#              NOTES:   1. All numerical data fields can be free-formatted.
+#                       2. Please use at least 4 decimal places for coordinate values
+#                       3. Please use at least 6 decimal places for coefficient values
+#                       4. Only include one grid type, grid size, soln method, turb model, etc per form.
+#                       5. Fill fields with value of -999 for data that are not available.
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "XXX"
+
+#                                                                                                                                         +----------------------------------------------------------------------- OPTIONAL -----------------------------------------------------------------------------------------------------------------------+
+# Column     1             2            3           4       5      6        7         8         9         10         11         12         13       14       15           16         17         18         19        20        21        22        23        24        25       26       27       28           29        30          31         32
+VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"  "CL_TOT"  "CD_TOT"  "CM_TOT"  "CL_WING"  "CD_WING"  "CM_WING"  "CD_PR"  "CD_SF"  "CD-CL2/PA"  "CL_TAIL"  "CD_TAIL"  "CM_TAIL"  "CL_FUS"  "CD_FUS"  "CM_FUS"  "CL_NAC"  "CD_NAC"  "CM_NAC"  "CL_PY"  "CD_PY"  "CM_PY"  "CPU_Hours"  "DELTAT"  "CTUSTART"  "CTUAVG"   "Q/E"  
+
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA ParticipantID   = "Participant ID"
+DATASETAUXDATA SubmissionDate  = "Date of Submission"
+DATASETAUXDATA Name            = "Name of Participant"
+DATASETAUXDATA Email           = "Email Address of Participant"
+DATASETAUXDATA Institution     = "Name of your company/organization"
+DATASETAUXDATA SolverName      = "Solver name used and version number"
+DATASETAUXDATA BasicAlgorithm  = "RANS, URANS, DES, DDES, WMLES, etc."
+DATASETAUXDATA TurbulenceModel = "SA, SA-RC, SA-la, SST, SST-2003, Wilcox1998k-w, EARSMko2005, etc."
+DATASETAUXDATA GridId          = "Multiblock, Overset, Hex, Hybrid, Prism, Custom, etc."
+DATASETAUXDATA Notes           = "Any thing else you would like to add"
+
+
+#-------------------------------------------------------------------------------
+#  REQUIRED:  VEHICLE F&M
+#  OPTIONAL:  INDIVIDUAL COMPONENT FORCES AND MOMENTS
+#-------------------------------------------------------------------------------
+ZONE T="XXX - CASE NUMBER"
+AUXDATA Tstatic         = "??"
+AUXDATA Deltat          = "Time step for unstady schemes (optional)"
+AUXDATA Misc            = "Any thing else you would like to add"
+             ?             ?????????    ?.????     ?.????   ??.??  ?.?????  ?.?????   ?.??????  ?.?????   ?.?????    ?.??????   ?.?????    ?.?????  ?.?????? ?.??????     ?.?????    ?.??????   ?.?????    ?.?????   ?.??????  ?.?????   ?.?????   ?.??????  ?.?????   ?.?????  ?.?????? ?.?????  ?????.?      ?.?????   ?.?????     ?.?????    ?.?????
