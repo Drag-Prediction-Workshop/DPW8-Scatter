@@ -95,7 +95,7 @@ DATASETAUXDATA Notes           = "Mesh size count is in terms of mesh cells coun
 # CREATE ZONES VARYING ALPHA WHILE HOLDING GRID LEVEL CONSTANT (LABEL: GRID LEVEL X)
 #    AND ZONES VARYING GRID LEVEL WHILE HOLDING ALPHA CONSTANT (LABEL: ALPHA X.XX)
 #-------------------------------------------------------------------------------
-ZONE T="006.01 GRID LEVEL 1"
+ZONE T="006.04 GRID LEVEL 1"
 AUXDATA Tstatic         = "271"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-1"
@@ -111,7 +111,7 @@ AUXDATA Misc            = "Mesh size count is in terms of mesh cells count"
 1 142423 1 0.73 3000000 3.60 1.09483496 0.05611706 -0.15771230 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 1 142423 1 0.73 3000000 3.90 1.07925513 0.05892069 -0.14827735 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 
-ZONE T="006.01 GRID LEVEL 2"
+ZONE T="006.04 GRID LEVEL 2"
 AUXDATA Tstatic         = "271"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-2"
@@ -127,7 +127,7 @@ AUXDATA Misc            = "Mesh size count is in terms of mesh cells count"
 2 269615 1 0.73 3000000 3.60 1.08914647 0.05459174 -0.15435820 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 2 269615 1 0.73 3000000 3.90 1.12065558 0.06222174 -0.15858908 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 
-ZONE T="006.01 GRID LEVEL 3"
+ZONE T="006.04 GRID LEVEL 3"
 AUXDATA Tstatic         = "271"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-3"
@@ -143,7 +143,7 @@ AUXDATA Misc            = "Mesh size count is in terms of mesh cells count"
 3 459969 1 0.73 3000000 3.60 1.09047890 0.05459677 -0.15411921 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 3 459969 1 0.73 3000000 3.90 1.13100389 0.06225483 -0.16032361 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 
-ZONE T="006.01 GRID LEVEL 4"
+ZONE T="006.04 GRID LEVEL 4"
 AUXDATA Tstatic         = "271"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-4"
@@ -159,7 +159,7 @@ AUXDATA Misc            = "Mesh size count is in terms of mesh cells count"
 4 707648 1 0.73 3000000 3.60 1.08734014 0.05512293 -0.15532687 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 4 707648 1 0.73 3000000 3.90 1.10686583 0.06149402 -0.15583522 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 
-ZONE T="006.01 GRID LEVEL 5"
+ZONE T="006.04 GRID LEVEL 5"
 AUXDATA Tstatic         = "271"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-5"
@@ -175,7 +175,7 @@ AUXDATA Misc            = "Mesh size count is in terms of mesh cells count"
 5 1062552 1 0.73 3000000 3.60 0.96490296 0.04525140 -0.12338912 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 5 1062552 1 0.73 3000000 3.90 0.96340156 0.04977678 -0.11986319 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 
-ZONE T="006.01 GRID LEVEL 6"
+ZONE T="006.04 GRID LEVEL 6"
 AUXDATA Tstatic         = "271"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-6"
@@ -190,7 +190,7 @@ AUXDATA Misc            = "Mesh size count is in terms of mesh cells count"
 6 1553926 1 0.73 3000000 3.60 1.06493464 0.05461371 -0.15326120 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 6 1553926 1 0.73 3000000 3.90 1.08024284 0.06088798 -0.15354877 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 
-ZONE T="006.01 ALPHA 1.36"
+ZONE T="006.04 ALPHA 1.36"
 AUXDATA Tstatic         = "271"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-[1-6]"
@@ -202,7 +202,7 @@ AUXDATA Misc            = "Mesh size count is in terms of mesh cells count"
 5 1062552 1 0.73 3000000 1.36 0.75243398 0.01366494 -0.12675453 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 6 1553926 1 0.73 3000000 1.36 0.74652928 0.01330293 -0.12561107 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 
-ZONE T="006.01 ALPHA 1.50"
+ZONE T="006.04 ALPHA 1.50"
 AUXDATA Tstatic         = "271"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-[1-6]"
@@ -214,7 +214,7 @@ AUXDATA Misc            = "Mesh size count is in terms of mesh cells count"
 5 1062552 1 0.73 3000000 1.50 0.78155977 0.01473842 -0.12739408 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 6 1553926 1 0.73 3000000 1.50 0.77501769 0.01428931 -0.12595715 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 
-ZONE T="006.01 ALPHA 2.50"
+ZONE T="006.04 ALPHA 2.50"
 AUXDATA Tstatic         = "271"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-[1-6]"
@@ -226,7 +226,7 @@ AUXDATA Misc            = "Mesh size count is in terms of mesh cells count"
 5 1062552 1 0.73 3000000 2.50 0.92312475 0.02793526 -0.13109319 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 6 1553926 1 0.73 3000000 2.50 0.94771507 0.03291374 -0.14577352 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 
-ZONE T="006.01 ALPHA 3.00"
+ZONE T="006.04 ALPHA 3.00"
 AUXDATA Tstatic         = "271"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-[1-6]"
@@ -238,7 +238,7 @@ AUXDATA Misc            = "Mesh size count is in terms of mesh cells count"
 5 1062552 1 0.73 3000000 3.00 0.95228483 0.03586776 -0.12886955 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 6 1553926 1 0.73 3000000 3.00 1.01189278 0.04276076 -0.15137192 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 
-ZONE T="006.01 ALPHA 3.10"
+ZONE T="006.04 ALPHA 3.10"
 AUXDATA Tstatic         = "271"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-[1-6]"
@@ -249,7 +249,7 @@ AUXDATA Misc            = "Mesh size count is in terms of mesh cells count"
 4 707648 1 0.73 3000000 3.10 1.05829884 0.04540094 -0.15634521 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 5 1062552 1 0.73 3000000 3.10 0.95603440 0.03746554 -0.12817454 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 
-ZONE T="006.01 ALPHA 3.25"
+ZONE T="006.04 ALPHA 3.25"
 AUXDATA Tstatic         = "271"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-[1-6]"
@@ -261,7 +261,7 @@ AUXDATA Misc            = "Mesh size count is in terms of mesh cells count"
 5 1062552 1 0.73 3000000 3.25 0.96046430 0.03984378 -0.12697126 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 6 1553926 1 0.73 3000000 3.25 1.03734709 0.04739355 -0.15245953 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 
-ZONE T="006.01 ALPHA 3.40"
+ZONE T="006.04 ALPHA 3.40"
 AUXDATA Tstatic         = "271"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-[1-6]"
@@ -272,7 +272,7 @@ AUXDATA Misc            = "Mesh size count is in terms of mesh cells count"
 4 707648 1 0.73 3000000 3.40 1.08610607 0.05164009 -0.15804122 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 5 1062552 1 0.73 3000000 3.40 0.96310379 0.04217000 -0.12549420 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 6 1553926 1 0.73 3000000 3.40 1.04180409 0.04946524 -0.15010451 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
-ZONE T="006.01 ALPHA 3.50"
+ZONE T="006.04 ALPHA 3.50"
 AUXDATA Tstatic         = "271"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-[1-6]"
@@ -284,7 +284,7 @@ AUXDATA Misc            = "Mesh size count is in terms of mesh cells count"
 4 707648 1 0.73 3000000 3.50 1.08837935 0.05334482 -0.15667118 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 5 1062552 1 0.73 3000000 3.50 0.96433425 0.04372153 -0.12448155 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 6 1553926 1 0.73 3000000 3.50 1.04982866 0.05232845 -0.15213346 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
-ZONE T="006.01 ALPHA 3.60"
+ZONE T="006.04 ALPHA 3.60"
 AUXDATA Tstatic         = "271"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-[1-6]"
@@ -296,7 +296,7 @@ AUXDATA Misc            = "Mesh size count is in terms of mesh cells count"
 5 1062552 1 0.73 3000000 3.60 0.96490296 0.04525140 -0.12338912 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 6 1553926 1 0.73 3000000 3.60 1.06493464 0.05461371 -0.15326120 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
 
-ZONE T="006.01 ALPHA 3.90"
+ZONE T="006.04 ALPHA 3.90"
 AUXDATA Tstatic         = "271"
 AUXDATA Deltat          = "Time step for unstady schemes (optional)"
 AUXDATA GridFileName    = "ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05_Unstructured_Level-[1-6]"
