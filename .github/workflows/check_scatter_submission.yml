@@ -26,7 +26,7 @@ jobs:
       # Get the names of the files changed in this PR
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v44
+        uses: tj-actions/changed-files@v46.0.5
         with:
           files: |
              TestCase1a/**
