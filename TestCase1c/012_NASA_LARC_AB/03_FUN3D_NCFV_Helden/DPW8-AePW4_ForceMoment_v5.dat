@@ -1,0 +1,140 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# DPW-8/AePW-4 FORCE AND MOMENT SUBMITTAL FORM (Version 5 - October 16, 2024)
+#
+# Provide this file for steady-state or time-averaged force and moment coefficients
+#
+#
+#
+# Data Set Title XXX.YY: Replace "XXX.YY" in the zone titles with the following information
+#                     (Three-Digit Participant ID).(Two-Digit Submission ID)
+#                     XXX THREE-DIGIT PARTICIPANT ID: assigned by your working group leaders
+#                     YY   TWO-DIGIT  SUBMISSION ID:  (self assigned) label a solver/grid/computational approach
+#                     EXAMPLE: 007.02
+#
+# 
+#       NOMENCLATURE:
+#         GRID_LEVEL:   Level of grid refinement (1-6)
+#          GRID_SIZE:   Number of grid nodes or cells
+#            GRIDFAC:   1/GRID_SIZE**2/3
+#               MACH:   Freestream Mach Number
+#                REY:   Chord-Based Reynolds Number
+#              ALPHA:   Angle of Attack, deg
+#                 CL:   Coefficient of Lift            (total) (L/(0.5*rho_inf*U_inf^2*A)  )              Provided to eight decimal points
+#                 CD:   Coefficient of Drag            (total) (D/(0.5*rho_inf*U_inf^2*A)  )              Provided to nine  decimal points
+#                 CM:   Coefficient of Pitching Moment (total) (M/(0.5*rho_inf*U_inf^2*A*c)) (+ nose-up)  Provided to eight decimal points
+#              CD_PR:   Surface-Pressure Integrated Drag Coefficient
+#              CD_SF:   Skin-Friction Integrated Drag Coefficient
+#              *_TOT:   Total Configuration Force/Moment
+#             *_TAIL:   Horizontal Tail Component Force/Moment
+#             *_WING:   Wing Component Force/Moment
+#              *_FUS:   Fuselage Component Force/Moment
+#              *_NAC:   Nacelle Component Force/Moment
+#               *_PY:   Pylon Component Force/Moment
+#                CPU:   CPU (or GPU) hours used
+#                 DT:   Time Step Per Iteration
+#           CTUSTART:   Convective Time Unit at Which Averaging Began
+#             CTUAVG:   Number of Convective Time Units in Time-Averaging Phase
+#                Q/E:   Dynamic Pressure / Modulus of Elasticity
+#
+#     DECIMAL POINTS:   Please provide data in at least the number of decimal points listed below (?.???????? would have at least eight decimal points)
+#
+#      OPTIONAL DATA:   Enter -999 for any optional data you are not submitting
+#                   
+#        DEFINITIONS:   CTU --> Convective Time Unit  (Uinf/Cref is 1.00 CTU)
+#
+#   REFERENCE VALUES: ONERA OAT15A (ONE CELL WIDE)
+#                       Planform ref area, A         =  Cref * span (span is grid dependent)
+#                       Mean aerodynamic chord, Cref =    230.00 mm
+#                       x moment center              =     57.50 mm
+#                       y moment center              =      0.00 mm
+#                       z moment center              =      0.00 mm
+#
+#   REFERENCE VALUES: Common Research Model
+#                       Planform ref area, A         = 594720.00 inches^2
+#                       Mean aerodynamic chord, Cref =    275.80 inches
+#                       Full-span length, B          =   2313.50 inches
+#                       Semi-span length, BO2        =   1156.75 inches
+#                       x moment center              =   1325.90 inches
+#                       y moment center              =      0.00 inches
+#                       z moment center              =    177.95 inches
+#                       Aspect Ratio, AR             =      9.00
+#
+#   CONFIGURATION:      ONERA OAT15A
+#                       CRMWB   (Common Research Model Wing/Body)
+#                       CRMWBNP (Common Research Model Wing/Body/Nacelle/Pylon)
+#
+#              NOTES:   1. All numerical data fields can be free-formatted.
+#                       2. Please use at least 4 decimal places for coordinate values
+#                       3. Please use at least 6 decimal places for coefficient values
+#                       4. Only include one grid type, grid size, soln method, turb model, etc per form.
+#                       5. Fill fields with value of -999 for data that are not available.
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "012.03"
+
+#                                                                                                                                                                                    +----------------------------------------------------------------------- OPTIONAL ---------------------------------------------------------------------------------------------------------------------+
+# Column     1             2            3           4       5      6         7           8            9            10            11            12            13           14           15           16           17           18          19           20          21          22           23          24          25           26          27           28        29          30         31
+VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"   "CL_TOT"    "CD_TOT"     "CM_TOT"     "CL_WING"     "CD_WING"     "CM_WING"     "CD_PR"      "CD_SF"      "CL_TAIL"    "CD_TAIL"    "CM_TAIL"    "CL_FUS"    "CD_FUS"     "CM_FUS"    "CL_NAC"    "CD_NAC"     "CM_NAC"    "CL_PY"     "CD_PY"      "CM_PY"     "CPU_Hours"  "DELTAT"  "CTUSTART"  "CTUAVG"   "Q/E"  
+
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA ParticipantID   = "012"
+DATASETAUXDATA SubmissionDate  = "2025-06-16"
+DATASETAUXDATA Name            = "Steven Massey"
+DATASETAUXDATA Email           = "Steven.J.Massey@nasa.gov"
+DATASETAUXDATA Institution     = "NASA Langley Research Center - Aeroelasticity Branch"
+DATASETAUXDATA SolverName      = "FUN3D 14.1"
+DATASETAUXDATA BasicAlgorithm  = "RANS"
+DATASETAUXDATA TurbulenceModel = "SA-NEG"
+DATASETAUXDATA GridId          = "Committee-provided - HeldenMesh_Unstructured_REV02"
+DATASETAUXDATA Notes           = ""
+
+
+#-------------------------------------------------------------------------------
+#  REQUIRED:  VEHICLE F&M
+#  OPTIONAL:  INDIVIDUAL COMPONENT FORCES AND MOMENTS
+#
+# CREATE ZONES VARYING ALPHA WHILE HOLDING GRID LEVEL CONSTANT (LABEL: GRID LEVEL X)
+#    AND ZONES VARYING GRID LEVEL WHILE HOLDING ALPHA CONSTANT (LABEL: ALPHA X.XX)
+#-------------------------------------------------------------------------------
+ZONE T="012.3 GRID LEVEL 1"
+AUXDATA Tstatic         = "271.00 K"
+AUXDATA GridFileName    = "HeldenMesh_Unstructured_REV02-level1.b8.ugrid"
+1 2340 0.005673565787443475 0.73 3000000.0 1.50 0.7602806294 0.04114807845 -0.155860329 0.7602806294 0.04114807845 -0.155860329 0.03434569104 0.006802387415 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
+ZONE T="012.3 GRID LEVEL 2"
+AUXDATA Tstatic         = "271.00 K"
+AUXDATA GridFileName    = "HeldenMesh_Unstructured_REV02-level2.b8.ugrid"
+2 6470 0.0028800308924981214 0.73 3000000.0 1.50 0.8274753545 0.02637297568 -0.1495164852 0.8274753545 0.02637297568 -0.1495164852 0.01961742402 0.006755551655 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
+ZONE T="012.3 GRID LEVEL 3"
+AUXDATA Tstatic         = "271.00 K"
+AUXDATA GridFileName    = "HeldenMesh_Unstructured_REV02-level3.b8.ugrid"
+3 19302 0.0013897343512519872 0.73 3000000.0 1.50 0.8271022731 0.0190644292 -0.1404935013 0.8271022731 0.0190644292 -0.1404935013 0.01255662188 0.006507807322 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
+ZONE T="012.3 GRID LEVEL 4"
+AUXDATA Tstatic         = "271.00 K"
+AUXDATA GridFileName    = "HeldenMesh_Unstructured_REV02-level4.b8.ugrid"
+4 63054 0.0006312357275855546 0.73 3000000.0 1.50 0.8119312914 0.01613745936 -0.1344718425 0.8119312914 0.01613745936 -0.1344718425 0.009757621137 0.006379838226 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
+ZONE T="012.3 GRID LEVEL 5"
+AUXDATA Tstatic         = "271.00 K"
+AUXDATA GridFileName    = "HeldenMesh_Unstructured_REV02-level5.b8.ugrid"
+5 220638 0.0002738712591900089 0.73 3000000.0 1.50 0.8111034473 0.01532796798 -0.1331411623 0.8111034473 0.01532796798 -0.1331411623 0.008948006869 0.006379961116 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
+ZONE T="012.3 GRID LEVEL 6"
+AUXDATA Tstatic         = "271.00 K"
+AUXDATA GridFileName    = "HeldenMesh_Unstructured_REV02-level6.b8.ugrid"
+6 822060 0.00011395437115521782 0.73 3000000.0 1.50 0.8122136962 0.01511139799 -0.1330794394 0.8122136962 0.01511139799 -0.1330794394 0.008720243562 0.006391154428 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
+ZONE T="012.3 GRID LEVEL 7"
+AUXDATA Tstatic         = "271.00 K"
+AUXDATA GridFileName    = "HeldenMesh_Unstructured_REV02-level7.b8.ugrid"
+7 3952952 3.9999292172845645e-05 0.73 3000000.0 1.50 0.8127718485 0.01504073199 -0.1330753371 0.8127718485 0.01504073199 -0.1330753371 0.008643000582 0.006397731412 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
+ZONE T="012.3 ALPHA 1.50"
+AUXDATA Tstatic         = "271.00 K"
+AUXDATA GridFileName    = "HeldenMesh_Unstructured_REV02-level1.b8.ugrid HeldenMesh_Unstructured_REV02-level2.b8.ugrid HeldenMesh_Unstructured_REV02-level3.b8.ugrid HeldenMesh_Unstructured_REV02-level4.b8.ugrid HeldenMesh_Unstructured_REV02-level5.b8.ugrid HeldenMesh_Unstructured_REV02-level6.b8.ugrid HeldenMesh_Unstructured_REV02-level7.b8.ugrid"
+1 2340 0.005673565787443475 0.73 3000000.0 1.50 0.7602806294 0.04114807845 -0.155860329 0.7602806294 0.04114807845 -0.155860329 0.03434569104 0.006802387415 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
+2 6470 0.0028800308924981214 0.73 3000000.0 1.50 0.8274753545 0.02637297568 -0.1495164852 0.8274753545 0.02637297568 -0.1495164852 0.01961742402 0.006755551655 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
+3 19302 0.0013897343512519872 0.73 3000000.0 1.50 0.8271022731 0.0190644292 -0.1404935013 0.8271022731 0.0190644292 -0.1404935013 0.01255662188 0.006507807322 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
+4 63054 0.0006312357275855546 0.73 3000000.0 1.50 0.8119312914 0.01613745936 -0.1344718425 0.8119312914 0.01613745936 -0.1344718425 0.009757621137 0.006379838226 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
+5 220638 0.0002738712591900089 0.73 3000000.0 1.50 0.8111034473 0.01532796798 -0.1331411623 0.8111034473 0.01532796798 -0.1331411623 0.008948006869 0.006379961116 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
+6 822060 0.00011395437115521782 0.73 3000000.0 1.50 0.8122136962 0.01511139799 -0.1330794394 0.8122136962 0.01511139799 -0.1330794394 0.008720243562 0.006391154428 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
+7 3952952 3.9999292172845645e-05 0.73 3000000.0 1.50 0.8127718485 0.01504073199 -0.1330753371 0.8127718485 0.01504073199 -0.1330753371 0.008643000582 0.006397731412 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999
