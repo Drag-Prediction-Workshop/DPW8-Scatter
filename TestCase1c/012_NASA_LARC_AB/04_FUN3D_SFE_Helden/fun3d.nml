@@ -1,0 +1,162 @@
+&project
+    project_rootname = 'foo'
+    case_title = 'case foo'
+/
+
+&flow_initialization
+  import_from = ''
+/
+
+&global
+    boundary_animation_freq = 1000
+    volume_animation_freq   = 0
+    moving_grid = .false.
+    ignore_negative_volumes = .true.
+/
+
+&raw_grid
+    grid_format = 'aflr3'
+    data_format = 'stream'
+    patch_lumping = 'none'
+    twod_mode = .true.
+/
+
+&boundary_output_variables
+    number_of_boundaries = -1
+    boundary_list = '2,4'
+    output_initial_state = .false.
+    cp = .true.
+    mach = .true.
+    yplus = .true.
+    cf_x = .true.
+    cf_y = .true.
+    cf_z = .true.
+    skinfr = .true.
+/
+
+&sampling_parameters
+  number_of_geometries = 3
+  number_of_points(3) = 1
+  points(1:3,3,1) = 103.5, -11.5, 15.5733126414739331
+  sampling_frequency(1:3) = 0, 1000, 0
+  type_of_geometry(1:3) = 'partition','circle','boundary_points'
+  export_to(1) = 'solb'
+  variable_list(1) = 'mach'
+  variable_list(3) = 'p'
+  plot(3) = 'serial_history'
+  label(3) = 'p'
+  circle_center(1:3,2) = 115, -0.01, 0.0
+  circle_normal(1:3,2) = 0,1,0
+  circle_radius(2) = 690
+  snap_output_xyz = .true.
+  dist_tolerance = 1.0e-3
+/
+
+&sampling_output_variables
+    x = .true.
+    y = .false.
+    z = .true.
+    rho = .true.
+    u = .true.
+    w = .true.
+    p = .true.
+    cp = .true.
+    mach = .true.
+    drhodx = .true.
+    drhodz = .true.
+    div_vel = .true.
+    vort_y = .true.
+/
+
+&governing_equations
+    flow_solver = 'sfe'
+    !flow_solver = 'fun3d'
+    eqn_type = 'compressible'
+    viscous_terms = 'turbulent'
+/
+
+&reference_physical_properties
+    mach_number = 0.73
+    reynolds_number = 13043.4782608696
+    temperature = 271
+    temperature_units = 'Kelvin'
+    angle_of_attack = 1.50 
+    angle_of_yaw = 0.0
+/
+
+&force_moment_integ_properties
+    area_reference = 5290.0E3
+    x_moment_length = 230.0
+    y_moment_length = 230.0
+    x_moment_center = 57.5
+    y_moment_center = 0.0
+    z_moment_center = 0.0
+/
+
+&inviscid_flux_method
+  flux_limiter = 'hvenkat'
+  smooth_limiter_coeff = 0.004347826087 ! 1 / 230
+  freeze_limiter_iteration = 3000
+/
+
+&turbulent_diffusion_models
+    !turbulence_model = 'sst'
+    turbulence_model = 'sa-neg'
+    !reynolds_stress_model = 'qcr2020'
+    !turb_compress_model = 'ssz' ! for sa
+    !turb_compress_model = 'suzen' ! for sst
+/
+
+&turbulence
+   turbulent_convection = 1  ! only for sa-neg
+/
+
+&nonlinear_solver_parameters
+    time_accuracy = 'steady'
+    !time_accuracy = '2ndorderOPT'
+    !time_step_nondim = 
+    !subiterations = 20
+    !temporal_err_control = .true.
+    !temporal_err_floor = 0.1
+    !schedule_iteration(1:2) = 1, 100
+    !schedule_cfl(1:2) = 20, 20
+    !schedule_cflturb(1:2) = 20, 20
+    hanim = .true.
+/
+
+&hanim
+    !cfl_factor_turb = 10000.0
+    !nominal_step_size = 1e-05
+    mu_gcr = 0.1 ! 0.05
+    preconditioner_tolerance_m = 0.05
+    preconditioner_tolerance_t = 0.05
+/
+
+&linear_solver_parameters
+    meanflow_sweeps = 15
+    turbulence_sweeps = 10
+    linear_projection = .false.
+/
+
+&special_parameters
+    large_angle_fix = 'on'
+/
+
+&code_run_control
+    steps =  10000
+    stopping_tolerance = 1e-15
+    restart_read = 'off'
+    history_write_freq = 1000
+    restart_write_freq = 1000
+    smart_jupdate = .true. 
+/
+
+&volume_output_variables
+  export_to='solb'
+  primitive_variables=.true.
+  turb1 = .true. 
+  turb2 = .false.
+  x = .false.
+  y = .false.
+  z = .false.
+/
