@@ -89,7 +89,7 @@ DATASETAUXDATA Institution     = "The Boeing Company - BCA"
 DATASETAUXDATA SolverName      = "OVERFLOW (v2.4d)"
 DATASETAUXDATA BasicAlgorithm  = "RANS"
 DATASETAUXDATA TurbulenceModel = "SA-neg"
-DATASETAUXDATA GridId          = "Cadence_Structured_REV02"
+DATASETAUXDATA GridId          = "ONERA-OAT15A_Cadence_Structured_REV02"
 DATASETAUXDATA Notes           = "Koren Limiter"
 
 
