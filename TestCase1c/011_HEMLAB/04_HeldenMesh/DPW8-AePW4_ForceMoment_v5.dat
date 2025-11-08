@@ -89,42 +89,42 @@ DATASETAUXDATA Institution     = "Istanbul Technical University"
 DATASETAUXDATA SolverName      = "HEMLAB"
 DATASETAUXDATA BasicAlgorithm  = "RANS"
 DATASETAUXDATA TurbulenceModel = "SA-neg"
-DATASETAUXDATA GridId          = "HeldenMesh Unstructured "
+DATASETAUXDATA GridId          = "ONERA-OAT15A_HeldenMesh_Unstructured_REV02"
 DATASETAUXDATA Notes           = "Test case 1c, HeldenMesh"
 
 
 ZONE T="011.04 - GRID LEVEL 4"
 AUXDATA Tstatic         = ""
 AUXDATA Deltat          = ""
-AUXDATA GridFileName    = "ONERA-OAT15A_HeldenMesh_Unstrucred_REV02_Level-4.lb8.mesh.hlb"
+AUXDATA GridFileName    = "ONERA-OAT15A_HeldenMesh_Unstructured_REV02_Level-4.lb8.mesh.hlb"
 AUXDATA Misc            = ""
  4     31527  0.00563194852  0.730000  3000000.000000  1.500000  0.7994458217  0.0152462361  -0.1311846226  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999
 
 ZONE T="011.04 - GRID LEVEL 5"
 AUXDATA Tstatic         = ""
 AUXDATA Deltat          = ""
-AUXDATA GridFileName    = "ONERA-OAT15A_HeldenMesh_Unstrucred_REV02_Level-5.lb8.mesh.hlb"
+AUXDATA GridFileName    = "ONERA-OAT15A_HeldenMesh_Unstructured_REV02_Level-5.lb8.mesh.hlb"
 AUXDATA Misc            = ""
  5    110319  0.00301075101  0.730000  3000000.000000  1.500000  0.8088230979  0.0150162064  -0.1323242903  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999
  
 ZONE T="011.04 - GRID LEVEL 6"
 AUXDATA Tstatic         = ""
 AUXDATA Deltat          = ""
-AUXDATA GridFileName    = "ONERA-OAT15A_HeldenMesh_Unstrucred_REV02_Level-6.lb8.mesh.hlb"
+AUXDATA GridFileName    = "ONERA-OAT15A_HeldenMesh_Unstructured_REV02_Level-6.lb8.mesh.hlb"
 AUXDATA Misc            = ""
  6    411030  0.00155977961  0.730000  3000000.000000  1.500000  0.8103321995  0.0149618781  -0.1325437600  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999
 
 ZONE T="011.04 - GRID LEVEL 7"
 AUXDATA Tstatic         = ""
 AUXDATA Deltat          = ""
-AUXDATA GridFileName    = "ONERA-OAT15A_HeldenMesh_Unstrucred_REV02_Level-7.lb8.mesh.hlb"
+AUXDATA GridFileName    = "ONERA-OAT15A_HeldenMesh_Unstructured_REV02_Level-7.lb8.mesh.hlb"
 AUXDATA Misc            = ""
  7   1976476  0.00071130232  0.730000  3000000.000000  1.500000  0.8126612344  0.0150015231  -0.1329861611  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999
 
 ZONE T="011.04 ALPHA 1.50"
 AUXDATA Tstatic         = ""
 AUXDATA Deltat          = ""
-AUXDATA GridFileName    = "ONERA-OAT15A_HeldenMesh_Unstrucred_REV02"
+AUXDATA GridFileName    = "ONERA-OAT15A_HeldenMesh_Unstructured_REV02"
 AUXDATA Misc            = ""
  4     31527  0.00563194852  0.730000  3000000.000000  1.500000  0.7994458217  0.0152462361  -0.1311846226  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999
  5    110319  0.00301075101  0.730000  3000000.000000  1.500000  0.8088230979  0.0150162064  -0.1323242903  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999  -999
