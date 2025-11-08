@@ -1,0 +1,220 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# DPW-8/AePW-4 FORCE AND MOMENT SUBMITTAL FORM (Version 6 - November 07, 2025)
+#
+# Provide this file for steady-state or time-averaged force and moment coefficients
+#
+#
+#
+# Data Set Title XXX.YY: Replace "XXX.YY" in the zone titles with the following information
+#                     (Three-Digit Participant ID).(Two-Digit Submission ID)
+#                     XXX THREE-DIGIT PARTICIPANT ID: assigned by your working group leaders
+#                     YY   TWO-DIGIT  SUBMISSION ID:  (self assigned) label a solver/grid/computational approach
+#                     EXAMPLE: 007.02
+#
+# 
+#       NOMENCLATURE:
+#         GRID_LEVEL:   Level of grid refinement (1-6)
+#          GRID_SIZE:   Number of grid nodes or cells
+#            GRIDFAC:   1/GRID_SIZE**2/3
+#               MACH:   Freestream Mach Number
+#                REY:   Chord-Based Reynolds Number
+#              ALPHA:   Angle of Attack, deg
+#                 CL:   Coefficient of Lift            (total) (L/(0.5*rho_inf*U_inf^2*A)  )              Provided to eight decimal points
+#                 CD:   Coefficient of Drag            (total) (D/(0.5*rho_inf*U_inf^2*A)  )              Provided to nine  decimal points
+#                 CM:   Coefficient of Pitching Moment (total) (M/(0.5*rho_inf*U_inf^2*A*c)) (+ nose-up)  Provided to eight decimal points
+#              CD_PR:   Surface-Pressure Integrated Drag Coefficient
+#              CD_SF:   Skin-Friction Integrated Drag Coefficient
+#              *_TOT:   Total Configuration Force/Moment
+#             *_TAIL:   Horizontal Tail Component Force/Moment
+#             *_WING:   Wing Component Force/Moment
+#              *_FUS:   Fuselage Component Force/Moment
+#              *_NAC:   Nacelle Component Force/Moment
+#               *_PY:   Pylon Component Force/Moment
+#                CPU:   CPU (or GPU) hours used
+#                 DT:   Time Step Per Iteration
+#           CTUSTART:   Convective Time Unit at Which Averaging Began
+#             CTUAVG:   Number of Convective Time Units in Time-Averaging Phase
+#                Q/E:   Dynamic Pressure / Modulus of Elasticity
+#
+#     DECIMAL POINTS:   Please provide data in at least the number of decimal points listed below (?.???????? would have at least eight decimal points)
+#
+#      OPTIONAL DATA:   Enter -999 for any optional data you are not submitting
+#                   
+#        DEFINITIONS:   CTU --> Convective Time Unit  (Uinf/Cref is 1.00 CTU)
+#
+#   REFERENCE VALUES: ONERA OAT15A (ONE CELL WIDE)
+#                       Planform ref area, A         =  Cref * span (span is grid dependent)
+#                       Mean aerodynamic chord, Cref =    230.00 mm
+#                       x moment center              =     57.50 mm
+#                       y moment center              =      0.00 mm
+#                       z moment center              =      0.00 mm
+#
+#   REFERENCE VALUES: DPW-III W1/W2
+#                       Planform ref area, A         =  225.0    inches^2
+#                       Mean aerodynamic chord, Cref =    7.7778 inches
+#                       Semi-span length, BO2        =   30.0    inches
+#                       x moment center              =    6.0726 inches
+#                       y moment center              =    0.00   inches
+#                       z moment center              =    0.00   inches
+#                       Aspect Ratio, AR             =      
+#
+#   REFERENCE VALUES: Common Research Model
+#                       Planform ref area, A         = 594720.00 inches^2
+#                       Mean aerodynamic chord, Cref =    275.80 inches
+#                       Full-span length, B          =   2313.50 inches
+#                       Semi-span length, BO2        =   1156.75 inches
+#                       x moment center              =   1325.90 inches
+#                       y moment center              =      0.00 inches
+#                       z moment center              =    177.95 inches
+#                       Aspect Ratio, AR             =      9.00
+#
+#   CONFIGURATION:      ONERA OAT15A
+#                       CRMWB   (Common Research Model Wing/Body)
+#                       CRMWBNP (Common Research Model Wing/Body/Nacelle/Pylon)
+#
+#              NOTES:   1. All numerical data fields can be free-formatted.
+#                       2. Please use at least 4 decimal places for coordinate values
+#                       3. Please use at least 6 decimal places for coefficient values
+#                       4. Only include one grid type, grid size, soln method, turb model, etc per form.
+#                       5. Fill fields with value of -999 for data that are not available.
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "003.03"
+
+#                                                                                                                                                                                    +----------------------------------------------------------------------- OPTIONAL ---------------------------------------------------------------------------------------------------------------------+
+# Column     1             2            3           4       5      6         7           8            9            10            11            12            13           14           15           16           17           18          19           20          21          22           23          24          25           26          27           28        29          30         31
+VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"   "CL_TOT"    "CD_TOT"     "CM_TOT"     "CL_WING"     "CD_WING"     "CM_WING"     "CD_PR"      "CD_SF"      "CL_TAIL"    "CD_TAIL"    "CM_TAIL"    "CL_FUS"    "CD_FUS"     "CM_FUS"    "CL_NAC"    "CD_NAC"     "CM_NAC"    "CL_PY"     "CD_PY"      "CM_PY"     "CPU_Hours"  "DELTAT"  "CTUSTART"  "CTUAVG"   "Q/E"  
+
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA ParticipantID   = "003.03"
+DATASETAUXDATA SubmissionDate  = "November 07, 2025"
+DATASETAUXDATA Name            = "Ben Rider"
+DATASETAUXDATA Email           = "ben.j.rider2@boeing.com"
+DATASETAUXDATA Institution     = "The Boeing Company - BCA"
+DATASETAUXDATA SolverName      = "FELight"
+DATASETAUXDATA BasicAlgorithm  = "RANS"
+DATASETAUXDATA TurbulenceModel = "SA-neg"
+DATASETAUXDATA GridId          = "Cadence_Grids.REV00.HexTrex_VoxFF/W1_HexTrex_VoxFF"
+DATASETAUXDATA Notes           = ""
+
+
+#-------------------------------------------------------------------------------
+#  REQUIRED:  VEHICLE F&M
+#  OPTIONAL:  INDIVIDUAL COMPONENT FORCES AND MOMENTS
+#
+# CREATE ZONES VARYING ALPHA WHILE HOLDING GRID LEVEL CONSTANT (LABEL: GRID LEVEL X)
+#    AND ZONES VARYING GRID LEVEL WHILE HOLDING ALPHA CONSTANT (LABEL: ALPHA X.XX)
+#-------------------------------------------------------------------------------
+ZONE T="003.03 WING1 GRID LEVEL 1"
+AUXDATA Tstatic         = "580.0 R"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "Cadence_Grids.REV00.HexTrex_VoxFF/W1_HexTrex_VoxFF/PW/DPW8_W1_Level_1.pw"
+AUXDATA Misc            = ""
+                   1             4807990      0.000456056051      0.760000000000          5000000.00      0.500000000000      0.470986206284      0.020253392849      0.065680897237                -999                -999                -999      0.014225700524      0.006027692325                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="003.03 WING1 GRID LEVEL 2"
+AUXDATA Tstatic         = "580.0 R"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "Cadence_Grids.REV00.HexTrex_VoxFF/W1_HexTrex_VoxFF/PW/DPW8_W1_Level_2.pw"
+AUXDATA Misc            = ""
+                   2            15190239      0.000256576984      0.760000000000          5000000.00      0.500000000000      0.474118290068      0.020281787990      0.066391542885                -999                -999                -999      0.014208884699      0.006072903291                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="003.03 WING1 GRID LEVEL 3"
+AUXDATA Tstatic         = "580.0 R"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "Cadence_Grids.REV00.HexTrex_VoxFF/W1_HexTrex_VoxFF/PW/DPW8_W1_Level_3.pw"
+AUXDATA Misc            = ""
+                   3            34164391      0.000171085482      0.760000000000          5000000.00      0.500000000000      0.475449813537      0.020309979439      0.066712196819                -999                -999                -999      0.014217177493      0.006092801946                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="003.03 WING1 GRID LEVEL 4"
+AUXDATA Tstatic         = "580.0 R"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "Cadence_Grids.REV00.HexTrex_VoxFF/W1_HexTrex_VoxFF/PW/DPW8_W1_Level_4.pw"
+AUXDATA Misc            = ""
+                   4            75302215      0.000115238109      0.760000000000          5000000.00      0.500000000000      0.476232408167      0.020338439051      0.066913297250                -999                -999                -999      0.014234898614      0.006103540437                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="003.03 WING1 GRID LEVEL 5"
+AUXDATA Tstatic         = "580.0 R"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "Cadence_Grids.REV00.HexTrex_VoxFF/W1_HexTrex_VoxFF/PW/DPW8_W1_Level_5.pw"
+AUXDATA Misc            = ""
+                   5           120838302      0.000090969895      0.760000000000          5000000.00      0.500000000000      0.476708096710      0.020354093998      0.067037154384                -999                -999                -999      0.014244869343      0.006109224655                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="003.03 WING1 GRID LEVEL 6"
+AUXDATA Tstatic         = "580.0 R"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "Cadence_Grids.REV00.HexTrex_VoxFF/W1_HexTrex_VoxFF/PW/DPW8_W1_Level_6.pw"
+AUXDATA Misc            = ""
+                   6           210993353      0.000068843923      0.760000000000          5000000.00      0.500000000000      0.477001661447      0.020366913225      0.067118833916                -999                -999                -999      0.014254259535      0.006112653690                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="003.03 WING1 ALPHA 0.50"
+AUXDATA Tstatic         = "580.0 R"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "Cadence_Grids.REV00.HexTrex_VoxFF/W1_HexTrex_VoxFF/PW/DPW8_W1_Level_#.pw"
+AUXDATA Misc            = ""
+                   1             4807990      0.000456056051      0.760000000000          5000000.00      0.500000000000      0.470986206284      0.020253392849      0.065680897237                -999                -999                -999      0.014225700524      0.006027692325                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   2            15190239      0.000256576984      0.760000000000          5000000.00      0.500000000000      0.474118290068      0.020281787990      0.066391542885                -999                -999                -999      0.014208884699      0.006072903291                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   3            34164391      0.000171085482      0.760000000000          5000000.00      0.500000000000      0.475449813537      0.020309979439      0.066712196819                -999                -999                -999      0.014217177493      0.006092801946                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   4            75302215      0.000115238109      0.760000000000          5000000.00      0.500000000000      0.476232408167      0.020338439051      0.066913297250                -999                -999                -999      0.014234898614      0.006103540437                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   5           120838302      0.000090969895      0.760000000000          5000000.00      0.500000000000      0.476708096710      0.020354093998      0.067037154384                -999                -999                -999      0.014244869343      0.006109224655                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   6           210993353      0.000068843923      0.760000000000          5000000.00      0.500000000000      0.477001661447      0.020366913225      0.067118833916                -999                -999                -999      0.014254259535      0.006112653690                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+#---------------------------------------------------
+
+ZONE T="003.03 WING2 GRID LEVEL 1"
+AUXDATA Tstatic         = "580.0 R"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "Cadence_Grids.REV00.HexTrex_VoxFF/W2_HexTrex_VoxFF/PW/DPW8_W2_Level_1.pw"
+AUXDATA Misc            = ""
+                   1             4623326      0.000465074729      0.760000000000          5000000.00      0.500000000000      0.492628226725      0.020534509624      0.065143607572                -999                -999                -999      0.014547214780      0.005987294844                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="003.03 WING2 GRID LEVEL 2"
+AUXDATA Tstatic         = "580.0 R"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "Cadence_Grids.REV00.HexTrex_VoxFF/W2_HexTrex_VoxFF/PW/DPW8_W2_Level_2.pw"
+AUXDATA Misc            = ""
+                   2            14540895      0.000262243318      0.760000000000          5000000.00      0.500000000000      0.495504006988      0.020546275073      0.065656266869                -999                -999                -999      0.014512870070      0.006033405003                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="003.03 WING2 GRID LEVEL 3"
+AUXDATA Tstatic         = "580.0 R"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "Cadence_Grids.REV00.HexTrex_VoxFF/W2_HexTrex_VoxFF/PW/DPW8_W2_Level_3.pw"
+AUXDATA Misc            = ""
+                   3            32755563      0.000174725972      0.760000000000          5000000.00      0.500000000000      0.496730435175      0.020569806983      0.065894878771                -999                -999                -999      0.014515150570      0.006054656413                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="003.03 WING2 GRID LEVEL 4"
+AUXDATA Tstatic         = "580.0 R"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "Cadence_Grids.REV00.HexTrex_VoxFF/W2_HexTrex_VoxFF/PW/DPW8_W2_Level_4.pw"
+AUXDATA Misc            = ""
+                   4            71495023      0.000118266595      0.760000000000          5000000.00      0.500000000000      0.497418429091      0.020595640593      0.066052514882                -999                -999                -999      0.014530186217      0.006065454376                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="003.03 WING2 GRID LEVEL 5"
+AUXDATA Tstatic         = "580.0 R"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "Cadence_Grids.REV00.HexTrex_VoxFF/W2_HexTrex_VoxFF/PW/DPW8_W2_Level_5.pw"
+AUXDATA Misc            = ""
+                   5           130706991      0.000087468281      0.760000000000          5000000.00      0.500000000000      0.497854356447      0.020609483412      0.066149396033                -999                -999                -999      0.014538115299      0.006071368114                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="003.03 WING2 GRID LEVEL 6"
+AUXDATA Tstatic         = "580.0 R"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "Cadence_Grids.REV00.HexTrex_VoxFF/W2_HexTrex_VoxFF/PW/DPW8_W2_Level_6.pw"
+AUXDATA Misc            = ""
+                   6                   0      0.000000000000      0.760000000000          5000000.00      0.500000000000      0.000000000000      0.000000000000      0.000000000000                -999                -999                -999      0.000000000000      0.000000000000                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="003.03 WING2 ALPHA 0.50"
+AUXDATA Tstatic         = "580.0 R"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "Cadence_Grids.REV00.HexTrex_VoxFF/W2_HexTrex_VoxFF/PW/DPW8_W2_Level_#.pw"
+AUXDATA Misc            = ""
+                   1             4623326      0.000465074729      0.760000000000          5000000.00      0.500000000000      0.492628226725      0.020534509624      0.065143607572                -999                -999                -999      0.014547214780      0.005987294844                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   2            14540895      0.000262243318      0.760000000000          5000000.00      0.500000000000      0.495504006988      0.020546275073      0.065656266869                -999                -999                -999      0.014512870070      0.006033405003                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   3            32755563      0.000174725972      0.760000000000          5000000.00      0.500000000000      0.496730435175      0.020569806983      0.065894878771                -999                -999                -999      0.014515150570      0.006054656413                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   4            71495023      0.000118266595      0.760000000000          5000000.00      0.500000000000      0.497418429091      0.020595640593      0.066052514882                -999                -999                -999      0.014530186217      0.006065454376                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   5           130706991      0.000087468281      0.760000000000          5000000.00      0.500000000000      0.497854356447      0.020609483412      0.066149396033                -999                -999                -999      0.014538115299      0.006071368114                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   6                   0      0.000000000000      0.760000000000          5000000.00      0.500000000000      0.000000000000      0.000000000000      0.000000000000                -999                -999                -999      0.000000000000      0.000000000000                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
