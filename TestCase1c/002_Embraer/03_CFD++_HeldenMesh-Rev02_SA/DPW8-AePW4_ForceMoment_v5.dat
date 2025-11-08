@@ -89,7 +89,7 @@ DATASETAUXDATA Institution     = "Embraer"
 DATASETAUXDATA SolverName      = "CFD++ 18.1.0"
 DATASETAUXDATA BasicAlgorithm  = "RANS"
 DATASETAUXDATA TurbulenceModel = "SA"
-DATASETAUXDATA GridId          = "ONERA-OAT15A_Cadence_Structured_REV02"
+DATASETAUXDATA GridId          = "ONERA-OAT15A_HeldenMesh_Unstructured_REV02"
 DATASETAUXDATA Notes           = ""
 
 

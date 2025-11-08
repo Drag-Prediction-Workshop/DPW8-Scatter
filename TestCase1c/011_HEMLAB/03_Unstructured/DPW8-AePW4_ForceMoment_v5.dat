@@ -89,7 +89,7 @@ DATASETAUXDATA Institution     = "Istanbul Technical University"
 DATASETAUXDATA SolverName      = "HEMLAB"
 DATASETAUXDATA BasicAlgorithm  = "RANS"
 DATASETAUXDATA TurbulenceModel = "SA-neg"
-DATASETAUXDATA GridId          = "Unstructured Hybrid"
+DATASETAUXDATA GridId          = "ONERA-OAT15A_Cadence_Unstructured_REV02"
 DATASETAUXDATA Notes           = "Test case 1c, Cadence_Unstructured"
 
 
