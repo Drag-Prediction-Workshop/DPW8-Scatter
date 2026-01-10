@@ -1,0 +1,143 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# DPW-8/AePW-4 SECTIONAL CUT SUBMITTAL FORM (Version 5 - October 16, 2024)
+#
+# Provide this file for steady-state or time-averaged sectional cuts
+#
+#
+#
+# Data Set Title XXX.YY: Replace "XXX.YY" in the zone titles with the following information
+#                     (Three-Digit Participant ID).(Two-Digit Submission ID)
+#                     XXX  THREE-DIGIT PARTICIPANT ID: assigned by your working group leaders
+#                     YY   TWO-DIGIT  SUBMISSION ID:  (self assigned) label a solver/grid/computational approach
+#                     K.KK ALPHA: Angle of attack for the solution
+#                     L    GRID LEVEL: 1, 2, 3, 4, 5, or 6
+#                     EXAMPLE: 007.02 - ALPHA 2.50 - GRID 3 - WING SECTION  1
+#
+# 
+#       NOMENCLATURE:
+#                  X:   X coordinate
+#                  Y:   Y coordinate
+#                  Z:   Z coordinate
+#                X/C:   Chord Fraction = (X - X_LE)/CHORD
+#                 CP:   Coefficient of pressure
+#                 CF:   Skin-friction coefficient at wall [tauw/(freestream dynamic pressure)]
+#        CFX,CFY,CFZ:   Components of skin-friction coefficient at wall
+#                   
+#        DEFINITIONS:   CTU --> Convective Time Unit  (Uinf/Cref is 1.00 CTU)
+#
+#   REFERENCE VALUES: ONERA OAT15A (ONE CELL WIDE)
+#                       Planform ref area, A         =  Cref * span (span is grid dependent)
+#                       Mean aerodynamic chord, Cref =    230.00 mm
+#                       x moment center              =     57.50 mm
+#                       y moment center              =      0.00 mm
+#                       z moment center              =      0.00 mm
+#
+#   REFERENCE VALUES: Common Research Model
+#                       Planform ref area, A         = 594720.00 inches^2
+#                       Mean aerodynamic chord, Cref =    275.80 inches
+#                       Full-span length, B          =   2313.50 inches
+#                       Semi-span length, BO2        =   1156.75 inches
+#                       x moment center              =   1325.90 inches
+#                       y moment center              =      0.00 inches
+#                       z moment center              =    177.95 inches
+#                       Aspect Ratio, AR             =      9.00
+#
+#   CONFIGURATION:      ONERA OAT15A
+#                       CRMWB   (Common Research Model Wing/Body)
+#                       CRMWBNP (Common Research Model Wing/Body/Nacelle/Pylon)
+#
+#
+#              NOTES:   1. All numerical data fields can be free-formatted.
+#                       2. Please use at least 4 decimal places for coordinate values
+#                       3. Please use at least 6 decimal places for coefficient values
+#                       4. Only include one grid type, grid size, soln method, turb model, etc per form.
+#                       5. Fill fields with value of -999 for data that are not available.
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "003.05"
+# Column       1     2     3     4       5      6      7       8       9
+VARIABLES =   "X"   "Y"   "Z"   "CP"    "CFX"  "CFY"  "CFZ"   "CF"    "X/C"
+
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA ParticipantID   = "003.05"
+DATASETAUXDATA SubmissionDate  = "March 01, 2025"
+DATASETAUXDATA Name            = "Ben Rider"
+DATASETAUXDATA Email           = "ben.j.rider2@boeing.com"
+DATASETAUXDATA Institution     = "The Boeing Company - BCA"
+DATASETAUXDATA SolverName      = "OVERFLOW (v2.4c)"
+DATASETAUXDATA BasicAlgorithm  = "RANS"
+DATASETAUXDATA TurbulenceModel = "SA-noft2"
+DATASETAUXDATA GridId          = "ONERA-OAT15A_UserCustomStructured"
+DATASETAUXDATA Notes           = "Koren Limiter, FSOT=1"
+
+
+ZONE T="003.05 - ALPHA 1.50 - GRID L1 - WING SECTION  1"
+AUXDATA GridLevel       = "1"
+AUXDATA Mach            = "0.73000"
+AUXDATA Re              = "3000000.00"
+AUXDATA Alpha           = "1.5000"
+AUXDATA Tstatic         = "487.8 R"
+AUXDATA CLtotal         = "0."
+AUXDATA Eta             = "0.0"
+AUXDATA GridFileName    = "ONERA-OAT15A_Cadence_Structured_REV01_Level-1"
+
+
+ZONE T="003.05 - ALPHA 1.50 - GRID L2 - WING SECTION  2"
+AUXDATA GridLevel       = "1"
+AUXDATA Mach            = "0.73000"
+AUXDATA Re              = "3000000.00"
+AUXDATA Alpha           = "1.5000"
+AUXDATA Tstatic         = "487.8 R"
+AUXDATA CLtotal         = "0."
+AUXDATA Eta             = "0.0"
+AUXDATA GridFileName    = "ONERA-OAT15A_Cadence_Structured_REV01_Level-2"
+
+
+ZONE T="003.05 - ALPHA 1.50 - GRID L3 - WING SECTION  1"
+AUXDATA GridLevel       = "1"
+AUXDATA Mach            = "0.73000"
+AUXDATA Re              = "3000000.00"
+AUXDATA Alpha           = "1.5000"
+AUXDATA Tstatic         = "487.8 R"
+AUXDATA CLtotal         = "0."
+AUXDATA Eta             = "0.0"
+AUXDATA GridFileName    = "ONERA-OAT15A_Cadence_Structured_REV01_Level-3"
+
+
+ZONE T="003.05 - ALPHA 1.50 - GRID L4 - WING SECTION  2"
+AUXDATA GridLevel       = "1"
+AUXDATA Mach            = "0.73000"
+AUXDATA Re              = "3000000.00"
+AUXDATA Alpha           = "1.5000"
+AUXDATA Tstatic         = "487.8 R"
+AUXDATA CLtotal         = "0."
+AUXDATA Eta             = "0.0"
+AUXDATA GridFileName    = "ONERA-OAT15A_Cadence_Structured_REV01_Level-4"
+
+
+ZONE T="003.05 - ALPHA 1.50 - GRID L5 - WING SECTION  1"
+AUXDATA GridLevel       = "1"
+AUXDATA Mach            = "0.73000"
+AUXDATA Re              = "3000000.00"
+AUXDATA Alpha           = "1.5000"
+AUXDATA Tstatic         = "487.8 R"
+AUXDATA CLtotal         = "0."
+AUXDATA Eta             = "0.0"
+AUXDATA GridFileName    = "ONERA-OAT15A_Cadence_Structured_REV01_Level-5"
+
+
+ZONE T="003.05 - ALPHA 1.50 - GRID L6 - WING SECTION  2"
+AUXDATA GridLevel       = "1"
+AUXDATA Mach            = "0.73000"
+AUXDATA Re              = "3000000.00"
+AUXDATA Alpha           = "1.5000"
+AUXDATA Tstatic         = "487.8 R"
+AUXDATA CLtotal         = "0."
+AUXDATA Eta             = "0.0"
+AUXDATA GridFileName    = "ONERA-OAT15A_Cadence_Structured_REV01_Level-6"
+
+
