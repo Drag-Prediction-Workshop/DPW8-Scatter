@@ -1,0 +1,156 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# DPW-8/AePW-4 FORCE AND MOMENT SUBMITTAL FORM (Version 6 - November 07, 2025)
+#
+# Provide this file for steady-state or time-averaged force and moment coefficients
+#
+#
+#
+# Data Set Title XXX.YY: Replace "XXX.YY" in the zone titles with the following information
+#                     (Three-Digit Participant ID).(Two-Digit Submission ID)
+#                     XXX THREE-DIGIT PARTICIPANT ID: assigned by your working group leaders
+#                     YY   TWO-DIGIT  SUBMISSION ID:  (self assigned) label a solver/grid/computational approach
+#                     EXAMPLE: 007.02
+#
+# 
+#       NOMENCLATURE:
+#         GRID_LEVEL:   Level of grid refinement (1-6)
+#          GRID_SIZE:   Number of grid nodes or cells
+#            GRIDFAC:   1/GRID_SIZE**2/3
+#               MACH:   Freestream Mach Number
+#                REY:   Chord-Based Reynolds Number
+#              ALPHA:   Angle of Attack, deg
+#                 CL:   Coefficient of Lift            (total) (L/(0.5*rho_inf*U_inf^2*A)  )              Provided to eight decimal points
+#                 CD:   Coefficient of Drag            (total) (D/(0.5*rho_inf*U_inf^2*A)  )              Provided to nine  decimal points
+#                 CM:   Coefficient of Pitching Moment (total) (M/(0.5*rho_inf*U_inf^2*A*c)) (+ nose-up)  Provided to eight decimal points
+#              CD_PR:   Surface-Pressure Integrated Drag Coefficient
+#              CD_SF:   Skin-Friction Integrated Drag Coefficient
+#              *_TOT:   Total Configuration Force/Moment
+#             *_TAIL:   Horizontal Tail Component Force/Moment
+#             *_WING:   Wing Component Force/Moment
+#              *_FUS:   Fuselage Component Force/Moment
+#              *_NAC:   Nacelle Component Force/Moment
+#               *_PY:   Pylon Component Force/Moment
+#                CPU:   CPU (or GPU) hours used
+#                 DT:   Time Step Per Iteration
+#           CTUSTART:   Convective Time Unit at Which Averaging Began
+#             CTUAVG:   Number of Convective Time Units in Time-Averaging Phase
+#                Q/E:   Dynamic Pressure / Modulus of Elasticity
+#
+#     DECIMAL POINTS:   Please provide data in at least the number of decimal points listed below (?.???????? would have at least eight decimal points)
+#
+#      OPTIONAL DATA:   Enter -999 for any optional data you are not submitting
+#                   
+#        DEFINITIONS:   CTU --> Convective Time Unit  (Uinf/Cref is 1.00 CTU)
+#
+#   REFERENCE VALUES: ONERA OAT15A (ONE CELL WIDE)
+#                       Planform ref area, A         =  Cref * span (span is grid dependent)
+#                       Mean aerodynamic chord, Cref =    230.00 mm
+#                       x moment center              =     57.50 mm
+#                       y moment center              =      0.00 mm
+#                       z moment center              =      0.00 mm
+#
+#   REFERENCE VALUES: DPW-III W1/W2
+#                       Planform ref area, A         =  225.0    inches^2
+#                       Mean aerodynamic chord, Cref =    7.7778 inches
+#                       Semi-span length, BO2        =   30.0    inches
+#                       x moment center              =    6.0726 inches
+#                       y moment center              =    0.00   inches
+#                       z moment center              =    0.00   inches
+#                       Aspect Ratio, AR             =    4.00
+#
+#   REFERENCE VALUES: Common Research Model
+#                       Planform ref area, A         = 594720.00 inches^2
+#                       Mean aerodynamic chord, Cref =    275.80 inches
+#                       Full-span length, B          =   2313.50 inches
+#                       Semi-span length, BO2        =   1156.75 inches
+#                       x moment center              =   1325.90 inches
+#                       y moment center              =      0.00 inches
+#                       z moment center              =    177.95 inches
+#                       Aspect Ratio, AR             =      9.00
+#
+#   CONFIGURATION:      ONERA OAT15A
+#                       CRMWB   (Common Research Model Wing/Body)
+#                       CRMWBNP (Common Research Model Wing/Body/Nacelle/Pylon)
+#
+#              NOTES:   1. All numerical data fields can be free-formatted.
+#                       2. Please use at least 4 decimal places for coordinate values
+#                       3. Please use at least 6 decimal places for coefficient values
+#                       4. Only include one grid type, grid size, soln method, turb model, etc per form.
+#                       5. Fill fields with value of -999 for data that are not available.
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "003.04"
+
+#                                                                                                                                                                                    +----------------------------------------------------------------------- OPTIONAL ---------------------------------------------------------------------------------------------------------------------+
+# Column     1             2            3           4       5      6         7           8            9            10            11            12            13           14           15           16           17           18          19           20          21          22           23          24          25           26          27           28        29          30         31
+VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"   "CL_TOT"    "CD_TOT"     "CM_TOT"     "CL_WING"     "CD_WING"     "CM_WING"     "CD_PR"      "CD_SF"      "CL_TAIL"    "CD_TAIL"    "CM_TAIL"    "CL_FUS"    "CD_FUS"     "CM_FUS"    "CL_NAC"    "CD_NAC"     "CM_NAC"    "CL_PY"     "CD_PY"      "CM_PY"     "CPU_Hours"  "DELTAT"  "CTUSTART"  "CTUAVG"   "Q/E"  
+
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA ParticipantID   = "003.04"
+DATASETAUXDATA SubmissionDate  = ""
+DATASETAUXDATA Name            = ""
+DATASETAUXDATA Email           = ""
+DATASETAUXDATA Institution     = ""
+DATASETAUXDATA SolverName      = "GGNS-T1/EPIC"
+DATASETAUXDATA BasicAlgorithm  = ""
+DATASETAUXDATA TurbulenceModel = "SA-neg-noft2"
+DATASETAUXDATA GridId          = ""
+DATASETAUXDATA Notes           = ""
+
+
+#-------------------------------------------------------------------------------
+#  REQUIRED:  VEHICLE F&M
+#  OPTIONAL:  INDIVIDUAL COMPONENT FORCES AND MOMENTS
+#
+# CREATE ZONES VARYING ALPHA WHILE HOLDING GRID LEVEL CONSTANT (LABEL: GRID LEVEL X)
+#    AND ZONES VARYING GRID LEVEL WHILE HOLDING ALPHA CONSTANT (LABEL: ALPHA X.XX)
+#-------------------------------------------------------------------------------
+ZONE T="003.04 WING1 ALPHA 0.50"
+AUXDATA Tstatic         = "580.0 R"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = ""
+AUXDATA Misc            = ""
+7	290334	0.00022807	0.76	5.00E+06	0.5	0.475288277	0.020474821	-0.066807385	0.475288277	0.020474821	-0.066807385	0.014363663	0.006111157	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+8	374329	0.00019253	0.76	5.00E+06	0.5	0.476001143	0.020439043	-0.06696017	0.476001143	0.020439043	-0.06696017	0.014337802	0.006101241	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+9	381133	0.000190231	0.76	5.00E+06	0.5	0.476125001	0.020435364	-0.06698501	0.476125001	0.020435364	-0.06698501	0.01433625	0.006099115	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+10	550299	0.000148914	0.76	5.00E+06	0.5	0.476635972	0.020407546	-0.067074417	0.476635972	0.020407546	-0.067074417	0.014306879	0.006100667	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+11	719875	0.000124498	0.76	5.00E+06	0.5	0.476970533	0.020395578	-0.067136588	0.476970533	0.020395578	-0.067136588	0.014292346	0.006103231	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+12	732604	0.000123052	0.76	5.00E+06	0.5	0.477017443	0.020394768	-0.067146336	0.477017443	0.020394768	-0.067146336	0.014292339	0.006102429	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+13	1162588	9.04446E-05	0.76	5.00E+06	0.5	0.477305149	0.020382216	-0.067191051	0.477305149	0.020382216	-0.067191051	0.014275786	0.006106431	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+14	1396693	8.00324E-05	0.76	5.00E+06	0.5	0.477417098	0.020380134	-0.067214652	0.477417098	0.020380134	-0.067214652	0.01427238	0.006107753	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+15	1420550	7.91339E-05	0.76	5.00E+06	0.5	0.477432184	0.020379954	-0.06721815	0.477432184	0.020379954	-0.06721815	0.014272195	0.006107759	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+16	2271141	5.78767E-05	0.76	5.00E+06	0.5	0.477541907	0.020375931	-0.067232361	0.477541907	0.020375931	-0.067232361	0.014263179	0.006112753	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17	2733041	5.11567E-05	0.76	5.00E+06	0.5	0.477586357	0.020375719	-0.067241585	0.477586357	0.020375719	-0.067241585	0.014261158	0.006114561	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+18	2780141	5.05773E-05	0.76	5.00E+06	0.5	0.477592724	0.020375619	-0.067243523	0.477592724	0.020375619	-0.067243523	0.014261042	0.006114577	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+19	4084113	3.91383E-05	0.76	5.00E+06	0.5	0.477627991	0.020375179	-0.067246901	0.477627991	0.020375179	-0.067246901	0.014256619	0.00611856	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+20	4151592	3.8713E-05	0.76	5.00E+06	0.5	0.47763385	0.020375165	-0.067248916	0.47763385	0.020375165	-0.067248916	0.014256752	0.006118413	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+21	5333016	3.27606E-05	0.76	5.00E+06	0.5	0.477648917	0.020375561	-0.067250189	0.477648917	0.020375561	-0.067250189	0.01425482	0.006120741	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+22	5434724	3.23506E-05	0.76	5.00E+06	0.5	0.477650681	0.020375543	-0.067250944	0.477650681	0.020375543	-0.067250944	0.014254727	0.006120816	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+
+
+ZONE T="003.04 WING2 ALPHA 0.50"
+AUXDATA Tstatic         = "580.0 R"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = ""
+AUXDATA Misc            = ""
+7	320612	0.000213475	0.76	5.00E+06	0.5	0.493770503	0.020813545	-0.064991483	0.493770503	0.020813545	-0.064991483	0.014658482	0.006155064	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+8	396321	0.00018534	0.76	5.00E+06	0.5	0.494703549	0.020755684	-0.065213799	0.494703549	0.020755684	-0.065213799	0.014622306	0.006133378	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+9	403860	0.000183026	0.76	5.00E+06	0.5	0.494868714	0.020747567	-0.065256229	0.494868714	0.020747567	-0.065256229	0.014620802	0.006126765	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+10	582040	0.000143449	0.76	5.00E+06	0.5	0.496020649	0.020692778	-0.065544228	0.496020649	0.020692778	-0.065544228	0.014584998	0.00610778	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+11	759036	0.000120178	0.76	5.00E+06	0.5	0.496758979	0.02066725	-0.065743962	0.496758979	0.02066725	-0.065743962	0.014570976	0.006096274	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+12	773451	0.00011868	0.76	5.00E+06	0.5	0.496867403	0.0206655	     -0.065775392	0.496867403	0.0206655	     -0.065775392	0.014571071	0.006094429	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+13	1217176	8.77198E-05	0.76	5.00E+06	0.5	0.497572134	0.020639676	-0.065965817	0.497572134	0.020639676	-0.065965817	0.01455441	0.006085265	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+14	1459082	7.77345E-05	0.76	5.00E+06	0.5	0.497848569	0.020633933	-0.06604402	0.497848569	0.020633933	-0.06604402	0.014551946	0.006081987	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+15	1485825	7.67989E-05	0.76	5.00E+06	0.5	0.497885767	0.020633284	-0.066054697	0.497885767	0.020633284	-0.066054697	0.014552412	0.006080872	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+16	2357288	5.64579E-05	0.76	5.00E+06	0.5	0.4982273	     0.02062349	-0.066148579	0.4982273	     0.02062349	-0.066148579	0.014543647	0.006079842	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17	2831356	4.99655E-05	0.76	5.00E+06	0.5	0.498360144	0.020621957	-0.066187039	0.498360144	0.020621957	-0.066187039	0.014542701	0.006079256	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+18	2879685	4.94049E-05	0.76	5.00E+06	0.5	0.49837612	0.020621951	-0.066191929	0.49837612	0.020621951	-0.066191929	0.014543098	0.006078853	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+19	4212474	3.83391E-05	0.76	5.00E+06	0.5	0.4985111	     0.020619558	-0.066230231	0.4985111	     0.020619558	-0.066230231	0.014539061	0.006080497	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+20	4280729	3.79305E-05	0.76	5.00E+06	0.5	0.498529558	0.020619544	-0.066236286	0.498529558	0.020619544	-0.066236286	0.014539534	0.00608001	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+21	5493306	3.21201E-05	0.76	5.00E+06	0.5	0.498589228	0.020619399	-0.066254003	0.498589228	0.020619399	-0.066254003	0.014537951	0.006081448	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+22	5589810	3.17494E-05	0.76	5.00E+06	0.5	0.498599414	0.020619395	-0.066257675	0.498599414	0.020619395	-0.066257675	0.014537912	0.006081483	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
