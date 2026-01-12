@@ -1,0 +1,107 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# DPW-8/AePW-4 GRID METRICS SUBMITTAL FORM (Version 4 - September 19, 2024)
+#
+# Provide this file if custom grids have been generated
+#
+#
+#
+# Data Set Title XXX.YY: Replace "XXX.YY" in the zone titles with the following information
+#                     (Three-Digit Participant ID).(Two-Digit Submission ID)
+#                     XXX THREE-DIGIT PARTICIPANT ID: assigned by your working group leaders
+#                     YY   TWO-DIGIT  SUBMISSION ID:  (self assigned) label a solver/grid/computational approach
+#                     EXAMPLE: 007.02
+#
+#
+#       NOMENCLATURE:
+#         GRID_LEVEL:   Level of grid refinement (1-6)
+#              ZONES:   Number of grid zones
+#        FIELD_NODES:   Number of field nodes
+#        FIELD_CELLS:   Number of field cells
+#     BOUNDARY_NODES:   Number of boundary nodes
+#     BOUNDARY_FACES:   Number of boundary faces
+#   BL_1ST_CELL_SIZE:   Size of 1st boundary layer cell
+# BL_MAX-GROWTH_RATE:   Maximum growth rate in boundary layer cells
+#           BL_CELLS:   Number of boundary layer cells
+#
+#      OPTIONAL DATA:   Enter -999 for any optional data you are not submitting
+#
+#   REFERENCE VALUES: ONERA OAT15A (ONE CELL WIDE)
+#                       Planform ref area, A         =  Cref * span (span is grid dependent)
+#                       Mean aerodynamic chord, Cref =    230.00 mm
+#                       x moment center              =     57.50 mm
+#                       y moment center              =      0.00 mm
+#                       z moment center              =      0.00 mm
+#
+#
+#   REFERENCE VALUES: Common Research Model
+#                       Planform ref area, A         = 594720.00 inches^2
+#                       Mean aerodynamic chord, Cref =    275.80 inches
+#                       Full-span length, B          =   2313.50 inches
+#                       Semi-span length, BO2        =   1156.75 inches
+#                       x moment center              =   1325.90 inches
+#                       y moment center              =      0.00 inches
+#                       z moment center              =    177.95 inches
+#                       Aspect Ratio, AR             =      9.00
+#
+#   CONFIGURATION:      ONERA OAT15A
+#                       CRMWB   (Common Research Model Wing/Body)
+#                       CRMWBNP (Common Research Model Wing/Body/Nacelle/Pylon)
+#
+#              NOTES:   1. All numerical data fields can be free-formatted.
+#                       2. Please use at least 4 decimal places for coordinate values
+#                       3. Please use at least 6 decimal places for coefficient values
+#                       4. Only include one grid type, grid size, soln method, turb model, etc per form.
+#                       5. Fill fields with value of -999 for data that are not available.
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "003.07"
+# Column     1            2       3             4             5                6                7                  8                    9
+VARIABLES = "GRID_LEVEL" "ZONES" "FIELD_NODES" "FIELD_CELLS" "BOUNDARY_NODES" "BOUNDARY_FACES" "BL_1ST_CELL_SIZE" "BL_MAX-GROWTH_RATE" "BL_CELLS"
+
+
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA ParticipantID   = "003.07"
+DATASETAUXDATA SubmissionDate  = "Nov 1, 2024"
+DATASETAUXDATA Name            = "Julie Duetsch-Patel"
+DATASETAUXDATA Email           = "julie.e.duetsch-patel@boeing.com"
+DATASETAUXDATA Institution     = "The Boeing Company"
+DATASETAUXDATA GeneratorName   = "Edge Primitive Insertion and Collapse (EPIC), v10.3"
+DATASETAUXDATA BasicAlgorithm  = "RANS"
+DATASETAUXDATA CustomGridDescr = "Grid Adaptation using EPIC. Adaptation metric: Drag Adjoint."
+DATASETAUXDATA GridId          = "Adapted Tetrahedral"
+DATASETAUXDATA Notes           = "Any thing else you would like to add"
+#GRID                  | Miscellaneous Notes
+#----------------------|---------------------------------------------------------------------------------------------
+DATASETAUXDATA L1Notes = ""
+DATASETAUXDATA L2Notes = ""
+DATASETAUXDATA L3Notes = ""
+DATASETAUXDATA L4Notes = ""
+DATASETAUXDATA L5Notes = ""
+DATASETAUXDATA L6Notes = ""
+
+
+ZONE T="003.07"
+AUXDATA Misc            = "Any thing else you would like to add"
+0 8 4005371 18774791 8759 3336124 -999 -999 -999 
+1 8 1182240 6687122 29353 200176 -999 -999 -999 
+2 8 2176110 12488406 79831 297956 -999 -999 -999 
+3 8 2355561 13469981 115440 379306 -999 -999 -999 
+4 8 2579497 14613997 177036 530262 -999 -999 -999 
+5 8 2584891 14714006 109694 477348 -999 -999 -999 
+6 8 2591322 14751602 73958 473786 -999 -999 -999 
+7 8 2618886 14808897 57906 543798 -999 -999 -999 
+8 8 3526205 19885279 59558 774004 -999 -999 -999 
+9 8 3550818 19818351 46415 907114 -999 -999 -999 
+10 8 5411280 30089512 54890 1464050 -999 -999 -999 
+11 8 7188324 39737337 73006 2082946 -999 -999 -999 
+12 8 7279593 39797802 68827 2405592 -999 -999 -999 
+13 8 11972565 65439788 93380 3972730 -999 -999 -999 
+14 8 14583985 79198967 97449 5153320 -999 -999 -999 
+15 8 14870221 79927857 100914 5836920 -999 -999 -999 
+16 8 24341820 131026122 127869 9393378 -999 -999 -999 
+17 8 29665520 158851842 147156 11995920 -999 -999 -999 
+18 8 29968358 159357771 141431 12951146 -999 -999 -999 
