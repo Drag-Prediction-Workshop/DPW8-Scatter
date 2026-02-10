@@ -1,0 +1,211 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# DPW-8/AePW-4 FORCE AND MOMENT SUBMITTAL FORM (Version 6 - November 07, 2025)
+#
+# Provide this file for steady-state or time-averaged force and moment coefficients
+#
+#
+#
+# Data Set Title XXX.YY: Replace "XXX.YY" in the zone titles with the following information
+#                     (Three-Digit Participant ID).(Two-Digit Submission ID)
+#                     XXX THREE-DIGIT PARTICIPANT ID: assigned by your working group leaders
+#                     YY   TWO-DIGIT  SUBMISSION ID:  (self assigned) label a solver/grid/computational approach
+#                     EXAMPLE: 007.02
+#
+# 
+#       NOMENCLATURE:
+#         GRID_LEVEL:   Level of grid refinement (1-6)
+#          GRID_SIZE:   Number of grid nodes or cells
+#            GRIDFAC:   1/GRID_SIZE**2/3
+#               MACH:   Freestream Mach Number
+#                REY:   Chord-Based Reynolds Number
+#              ALPHA:   Angle of Attack, deg
+#                 CL:   Coefficient of Lift            (total) (L/(0.5*rho_inf*U_inf^2*A)  )              Provided to eight decimal points
+#                 CD:   Coefficient of Drag            (total) (D/(0.5*rho_inf*U_inf^2*A)  )              Provided to nine  decimal points
+#                 CM:   Coefficient of Pitching Moment (total) (M/(0.5*rho_inf*U_inf^2*A*c)) (+ nose-up)  Provided to eight decimal points
+#              CD_PR:   Surface-Pressure Integrated Drag Coefficient
+#              CD_SF:   Skin-Friction Integrated Drag Coefficient
+#              *_TOT:   Total Configuration Force/Moment
+#             *_TAIL:   Horizontal Tail Component Force/Moment
+#             *_WING:   Wing Component Force/Moment
+#              *_FUS:   Fuselage Component Force/Moment
+#              *_NAC:   Nacelle Component Force/Moment
+#               *_PY:   Pylon Component Force/Moment
+#                CPU:   CPU (or GPU) hours used
+#                 DT:   Time Step Per Iteration
+#           CTUSTART:   Convective Time Unit at Which Averaging Began
+#             CTUAVG:   Number of Convective Time Units in Time-Averaging Phase
+#                Q/E:   Dynamic Pressure / Modulus of Elasticity
+#
+#     DECIMAL POINTS:   Please provide data in at least the number of decimal points listed below (?.???????? would have at least eight decimal points)
+#
+#      OPTIONAL DATA:   Enter -999 for any optional data you are not submitting
+#                   
+#        DEFINITIONS:   CTU --> Convective Time Unit  (Uinf/Cref is 1.00 CTU)
+#
+#   REFERENCE VALUES: ONERA OAT15A (ONE CELL WIDE)
+#                       Planform ref area, A         =  Cref * span (span is grid dependent)
+#                       Mean aerodynamic chord, Cref =    230.00 mm
+#                       x moment center              =     57.50 mm
+#                       y moment center              =      0.00 mm
+#                       z moment center              =      0.00 mm
+#
+#   REFERENCE VALUES: DPW-III W1/W2
+#                       Planform ref area, A         =  225.0    inches^2
+#                       Mean aerodynamic chord, Cref =    7.7778 inches
+#                       Semi-span length, BO2        =   30.0    inches
+#                       x moment center              =    6.0726 inches
+#                       y moment center              =    0.00   inches
+#                       z moment center              =    0.00   inches
+#                       Aspect Ratio, AR             =      
+#
+#   REFERENCE VALUES: Common Research Model
+#                       Planform ref area, A         = 594720.00 inches^2
+#                       Mean aerodynamic chord, Cref =    275.80 inches
+#                       Full-span length, B          =   2313.50 inches
+#                       Semi-span length, BO2        =   1156.75 inches
+#                       x moment center              =   1325.90 inches
+#                       y moment center              =      0.00 inches
+#                       z moment center              =    177.95 inches
+#                       Aspect Ratio, AR             =      9.00
+#
+#   CONFIGURATION:      ONERA OAT15A
+#                       CRMWB   (Common Research Model Wing/Body)
+#                       CRMWBNP (Common Research Model Wing/Body/Nacelle/Pylon)
+#
+#              NOTES:   1. All numerical data fields can be free-formatted.
+#                       2. Please use at least 4 decimal places for coordinate values
+#                       3. Please use at least 6 decimal places for coefficient values
+#                       4. Only include one grid type, grid size, soln method, turb model, etc per form.
+#                       5. Fill fields with value of -999 for data that are not available.
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "002.01"
+
+#                                                                                                                                                                                    +----------------------------------------------------------------------- OPTIONAL ---------------------------------------------------------------------------------------------------------------------+
+# Column     1             2            3           4       5      6         7           8            9            10            11            12            13           14           15           16           17           18          19           20          21          22           23          24          25           26          27           28        29          30         31
+VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"   "CL_TOT"    "CD_TOT"     "CM_TOT"     "CL_WING"     "CD_WING"     "CM_WING"     "CD_PR"      "CD_SF"      "CL_TAIL"    "CD_TAIL"    "CM_TAIL"    "CL_FUS"    "CD_FUS"     "CM_FUS"    "CL_NAC"    "CD_NAC"     "CM_NAC"    "CL_PY"     "CD_PY"      "CM_PY"     "CPU_Hours"  "DELTAT"  "CTUSTART"  "CTUAVG"   "Q/E"  
+
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA ParticipantID   = "002.01"
+DATASETAUXDATA SubmissionDate  = "2026/01/13"
+DATASETAUXDATA Name            = "Mestriner"
+DATASETAUXDATA Email           = "murilo.mestriner@embraer.com.br"
+DATASETAUXDATA Institution     = "Embraer"
+DATASETAUXDATA SolverName      = "CFD++ 21.1.0"
+DATASETAUXDATA BasicAlgorithm  = "RANS"
+DATASETAUXDATA TurbulenceModel = "SA"
+DATASETAUXDATA GridId          = "CadenceTetFF"
+DATASETAUXDATA Notes           = ""
+
+ZONE T="002.01 WING1 GRID LEVEL 1"
+AUXDATA Tstatic         = "322.22K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "CadenceTetFF"
+AUXDATA Misc            = ""
+                   1             4375079      3.73831650e-05      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.75730790e-01      2.12950940e-02     -6.78453630e-02      4.75730790e-01      2.12950940e-02     -6.78453630e-02      1.51510000e-02      6.14400000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="002.01 WING1 GRID LEVEL 2"
+AUXDATA Tstatic         = "322.22K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "CadenceTetFF"
+AUXDATA Misc            = ""
+                   2            12286088      1.87812396e-05      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.76681200e-01      2.10595570e-02     -6.79477640e-02      4.76681200e-01      2.10595570e-02     -6.79477640e-02      1.49180000e-02      6.14200000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="002.01 WING1 GRID LEVEL 3"
+AUXDATA Tstatic         = "322.22K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "CadenceTetFF"
+AUXDATA Misc            = ""
+                   3            28380694      1.07477608e-05      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.76681160e-01      2.09171520e-02     -6.78936420e-02      4.76681160e-01      2.09171520e-02     -6.78936420e-02      1.47740000e-02      6.14300000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="002.01 WING1 GRID LEVEL 4"
+AUXDATA Tstatic         = "322.22K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "CadenceTetFF"
+AUXDATA Misc            = ""
+                   4            59859720      6.53496921e-06      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.76774020e-01      2.08471290e-02     -6.78734780e-02      4.76774020e-01      2.08471290e-02     -6.78734780e-02      1.47010000e-02      6.14600000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="002.01 WING1 GRID LEVEL 5"
+AUXDATA Tstatic         = "322.22K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "CadenceTetFF"
+AUXDATA Misc            = ""
+                   5            97934404      4.70662731e-06      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.76678780e-01      2.07681730e-02     -6.78215610e-02      4.76678780e-01      2.07681730e-02     -6.78215610e-02      1.46210000e-02      6.14700000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="002.01 WING1 GRID LEVEL 6"
+AUXDATA Tstatic         = "322.22K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "CadenceTetFF"
+AUXDATA Misc            = ""
+                   6           187666714      3.05076321e-06      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.76765540e-01      2.07110080e-02     -6.77235440e-02      4.76765540e-01      2.07110080e-02     -6.77235440e-02      1.45640000e-02      6.14700000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="002.01 WING1 ALPHA 0.50"
+AUXDATA Tstatic         = "322.22K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "CadenceTetFF"
+AUXDATA Misc            = ""
+                   1             4375079      3.73831650e-05      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.75730790e-01      2.12950940e-02     -6.78453630e-02      4.75730790e-01      2.12950940e-02     -6.78453630e-02      1.51510000e-02      6.14400000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   2            12286088      1.87812396e-05      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.76681200e-01      2.10595570e-02     -6.79477640e-02      4.76681200e-01      2.10595570e-02     -6.79477640e-02      1.49180000e-02      6.14200000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   3            28380694      1.07477608e-05      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.76681160e-01      2.09171520e-02     -6.78936420e-02      4.76681160e-01      2.09171520e-02     -6.78936420e-02      1.47740000e-02      6.14300000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   4            59859720      6.53496921e-06      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.76774020e-01      2.08471290e-02     -6.78734780e-02      4.76774020e-01      2.08471290e-02     -6.78734780e-02      1.47010000e-02      6.14600000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   5            97934404      4.70662731e-06      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.76678780e-01      2.07681730e-02     -6.78215610e-02      4.76678780e-01      2.07681730e-02     -6.78215610e-02      1.46210000e-02      6.14700000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   6           187666714      3.05076321e-06      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.76765540e-01      2.07110080e-02     -6.77235440e-02      4.76765540e-01      2.07110080e-02     -6.77235440e-02      1.45640000e-02      6.14700000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="002.01 WING2 GRID LEVEL 1"
+AUXDATA Tstatic         = "322.22K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "CadenceTetFF"
+AUXDATA Misc            = ""
+                   1             3862914      4.06184463e-05      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.97084920e-01      2.18736010e-02     -6.76407510e-02      4.97084920e-01      2.18736010e-02     -6.76407510e-02      1.57590000e-02      6.11500000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="002.01 WING2 GRID LEVEL 2"
+AUXDATA Tstatic         = "322.22K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "CadenceTetFF"
+AUXDATA Misc            = ""
+                   2            10816012      2.04466373e-05      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.98117500e-01      2.15643800e-02     -6.75915810e-02      4.98117500e-01      2.15643800e-02     -6.75915810e-02      1.54530000e-02      6.11200000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="002.01 WING2 GRID LEVEL 3"
+AUXDATA Tstatic         = "322.22K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "CadenceTetFF"
+AUXDATA Misc            = ""
+                   3            25617473      1.15073629e-05      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.98051890e-01      2.13527110e-02     -6.73925890e-02      4.98051890e-01      2.13527110e-02     -6.73925890e-02      1.52410000e-02      6.11200000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="002.01 WING2 GRID LEVEL 4"
+AUXDATA Tstatic         = "322.22K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "CadenceTetFF"
+AUXDATA Misc            = ""
+                   4            53663511      7.02879070e-06      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.97855580e-01      2.12541090e-02     -6.72716250e-02      4.97855580e-01      2.12541090e-02     -6.72716250e-02      1.51430000e-02      6.11200000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="002.01 WING2 GRID LEVEL 5"
+AUXDATA Tstatic         = "322.22K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "CadenceTetFF"
+AUXDATA Misc            = ""
+                   5           106696880      4.44527725e-06      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.97735480e-01      2.11660460e-02     -6.71299520e-02      4.97735480e-01      2.11660460e-02     -6.71299520e-02      1.50540000e-02      6.11200000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="002.01 WING2 GRID LEVEL 6"
+AUXDATA Tstatic         = "322.22K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "CadenceTetFF"
+AUXDATA Misc            = ""
+                   6           204046036      2.88523522e-06      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.97573100e-01      2.11105660e-02     -6.70340900e-02      4.97573100e-01      2.11105660e-02     -6.70340900e-02      1.49990000e-02      6.11100000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="002.01 WING2 ALPHA 0.50"
+AUXDATA Tstatic         = "322.22K"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "CadenceTetFF"
+AUXDATA Misc            = ""
+                   1             3862914      4.06184463e-05      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.97084920e-01      2.18736010e-02     -6.76407510e-02      4.97084920e-01      2.18736010e-02     -6.76407510e-02      1.57590000e-02      6.11500000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   2            10816012      2.04466373e-05      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.98117500e-01      2.15643800e-02     -6.75915810e-02      4.98117500e-01      2.15643800e-02     -6.75915810e-02      1.54530000e-02      6.11200000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   3            25617473      1.15073629e-05      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.98051890e-01      2.13527110e-02     -6.73925890e-02      4.98051890e-01      2.13527110e-02     -6.73925890e-02      1.52410000e-02      6.11200000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   4            53663511      7.02879070e-06      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.97855580e-01      2.12541090e-02     -6.72716250e-02      4.97855580e-01      2.12541090e-02     -6.72716250e-02      1.51430000e-02      6.11200000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   5           106696880      4.44527725e-06      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.97735480e-01      2.11660460e-02     -6.71299520e-02      4.97735480e-01      2.11660460e-02     -6.71299520e-02      1.50540000e-02      6.11200000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   6           204046036      2.88523522e-06      7.80000000e-01      5.00000000e+06      5.00000000e-01      4.97573100e-01      2.11105660e-02     -6.70340900e-02      4.97573100e-01      2.11105660e-02     -6.70340900e-02      1.49990000e-02      6.11100000e-03                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
