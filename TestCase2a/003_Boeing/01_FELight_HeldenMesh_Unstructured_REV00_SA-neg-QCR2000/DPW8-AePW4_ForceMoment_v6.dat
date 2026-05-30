@@ -1,0 +1,169 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# DPW-8/AePW-4 FORCE AND MOMENT SUBMITTAL FORM (Version 6 - November 07, 2025)
+#
+# Provide this file for steady-state or time-averaged force and moment coefficients
+#
+#
+#
+# Data Set Title XXX.YY: Replace "XXX.YY" in the zone titles with the following information
+#                     (Three-Digit Participant ID).(Two-Digit Submission ID)
+#                     XXX THREE-DIGIT PARTICIPANT ID: assigned by your working group leaders
+#                     YY   TWO-DIGIT  SUBMISSION ID:  (self assigned) label a solver/grid/computational approach
+#                     EXAMPLE: 007.02
+#
+# 
+#       NOMENCLATURE:
+#         GRID_LEVEL:   Level of grid refinement (1-6)
+#          GRID_SIZE:   Number of grid nodes or cells
+#            GRIDFAC:   1/GRID_SIZE**2/3
+#               MACH:   Freestream Mach Number
+#                REY:   Chord-Based Reynolds Number
+#              ALPHA:   Angle of Attack, deg
+#                 CL:   Coefficient of Lift            (total) (L/(0.5*rho_inf*U_inf^2*A)  )              Provided to eight decimal points
+#                 CD:   Coefficient of Drag            (total) (D/(0.5*rho_inf*U_inf^2*A)  )              Provided to nine  decimal points
+#                 CM:   Coefficient of Pitching Moment (total) (M/(0.5*rho_inf*U_inf^2*A*c)) (+ nose-up)  Provided to eight decimal points
+#              CD_PR:   Surface-Pressure Integrated Drag Coefficient
+#              CD_SF:   Skin-Friction Integrated Drag Coefficient
+#              *_TOT:   Total Configuration Force/Moment
+#             *_TAIL:   Horizontal Tail Component Force/Moment
+#             *_WING:   Wing Component Force/Moment
+#              *_FUS:   Fuselage Component Force/Moment
+#              *_NAC:   Nacelle Component Force/Moment
+#               *_PY:   Pylon Component Force/Moment
+#                CPU:   CPU (or GPU) hours used
+#                 DT:   Time Step Per Iteration
+#           CTUSTART:   Convective Time Unit at Which Averaging Began
+#             CTUAVG:   Number of Convective Time Units in Time-Averaging Phase
+#                Q/E:   Dynamic Pressure / Modulus of Elasticity
+#
+#     DECIMAL POINTS:   Please provide data in at least the number of decimal points listed below (?.???????? would have at least eight decimal points)
+#
+#      OPTIONAL DATA:   Enter -999 for any optional data you are not submitting
+#                   
+#        DEFINITIONS:   CTU --> Convective Time Unit  (Uinf/Cref is 1.00 CTU)
+#
+#   REFERENCE VALUES: ONERA OAT15A (ONE CELL WIDE)
+#                       Planform ref area, A         =  Cref * span (span is grid dependent)
+#                       Mean aerodynamic chord, Cref =    230.00 mm
+#                       x moment center              =     57.50 mm
+#                       y moment center              =      0.00 mm
+#                       z moment center              =      0.00 mm
+#
+#   REFERENCE VALUES: DPW-III W1/W2
+#                       Planform ref area, A         =  225.0    inches^2
+#                       Mean aerodynamic chord, Cref =    7.7778 inches
+#                       Semi-span length, BO2        =   30.0    inches
+#                       x moment center              =    6.0726 inches
+#                       y moment center              =    0.00   inches
+#                       z moment center              =    0.00   inches
+#                       Aspect Ratio, AR             =    4.00
+#
+#   REFERENCE VALUES: Common Research Model
+#                       Planform ref area, A         = 594720.00 inches^2
+#                       Mean aerodynamic chord, Cref =    275.80 inches
+#                       Full-span length, B          =   2313.50 inches
+#                       Semi-span length, BO2        =   1156.75 inches
+#                       x moment center              =   1325.90 inches
+#                       y moment center              =      0.00 inches
+#                       z moment center              =    177.95 inches
+#                       Aspect Ratio, AR             =      9.00
+#
+#   CONFIGURATION:      ONERA OAT15A
+#                       CRMWB   (Common Research Model Wing/Body)
+#                       CRMWBNP (Common Research Model Wing/Body/Nacelle/Pylon)
+#
+#              NOTES:   1. All numerical data fields can be free-formatted.
+#                       2. Please use at least 4 decimal places for coordinate values
+#                       3. Please use at least 6 decimal places for coefficient values
+#                       4. Only include one grid type, grid size, soln method, turb model, etc per form.
+#                       5. Fill fields with value of -999 for data that are not available.
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "003.01"
+
+#                                                                                                                                                                                    +----------------------------------------------------------------------- OPTIONAL ---------------------------------------------------------------------------------------------------------------------+
+# Column     1             2            3           4       5      6         7           8            9            10            11            12            13           14           15           16           17           18          19           20          21          22           23          24          25           26          27           28        29          30         31
+VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"   "CL_TOT"    "CD_TOT"     "CM_TOT"     "CL_WING"     "CD_WING"     "CM_WING"     "CD_PR"      "CD_SF"      "CL_TAIL"    "CD_TAIL"    "CM_TAIL"    "CL_FUS"    "CD_FUS"     "CM_FUS"    "CL_NAC"    "CD_NAC"     "CM_NAC"    "CL_PY"     "CD_PY"      "CM_PY"     "CPU_Hours"  "DELTAT"  "CTUSTART"  "CTUAVG"   "Q/E"  
+
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA ParticipantID   = "003.01"
+DATASETAUXDATA SubmissionDate  = "May 01, 2026"
+DATASETAUXDATA Name            = "Ben Rider"
+DATASETAUXDATA Email           = "ben.j.rider2@boeing.com"
+DATASETAUXDATA Institution     = "The Boeing Company - BCA"
+DATASETAUXDATA SolverName      = "FELight"
+DATASETAUXDATA BasicAlgorithm  = "RANS"
+DATASETAUXDATA TurbulenceModel = "SA-neg-QCR2000"
+DATASETAUXDATA GridId          = "Helden_Grids.REV00"
+DATASETAUXDATA Notes           = ""
+
+#-------------------------------------------------------------------------------
+#  REQUIRED:  VEHICLE F&M
+#  OPTIONAL:  INDIVIDUAL COMPONENT FORCES AND MOMENTS
+#
+# CREATE ZONES VARYING ALPHA WHILE HOLDING GRID LEVEL CONSTANT (LABEL: GRID LEVEL X)
+#    AND ZONES VARYING GRID LEVEL WHILE HOLDING ALPHA CONSTANT (LABEL: ALPHA X.XX)
+#-------------------------------------------------------------------------------
+ZONE T="003.01 CRM-WB GRID LEVEL 1"
+AUXDATA Tstatic         = "-999"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "Helden_Grids.REV00"
+AUXDATA Misc            = ""
+                   1                   0      0.000000000000      0.850000000000          5000000.00      2.500000000000      0.000000000000      0.000000000000      0.000000000000                -999                -999                -999      0.000000000000      0.000000000000                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="003.01 CRM-WB GRID LEVEL 2"
+AUXDATA Tstatic         = "-999"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "Helden_Grids.REV00"
+AUXDATA Misc            = ""
+                   2                   0      0.000000000000      0.850000000000          5000000.00      2.500000000000      0.000000000000      0.000000000000      0.000000000000                -999                -999                -999      0.000000000000      0.000000000000                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="003.01 CRM-WB GRID LEVEL 3"
+AUXDATA Tstatic         = "-999"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "Helden_Grids.REV00"
+AUXDATA Misc            = ""
+                   3            26772535      0.000193265908      0.850000000000          5000000.00      2.500000000000      0.508275470516      0.026059612470     -0.096333359557                -999                -999                -999      0.014689414566      0.011370197904                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   3            26727100      0.000193430111      0.850000000000          5000000.00      2.750000000000      0.543301781152      0.028256897540     -0.100678273411                -999                -999                -999      0.016947798999      0.011309098542                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   3            26767541      0.000193283936      0.850000000000          5000000.00      3.000000000000      0.576912345291      0.030917761601     -0.104754366796                -999                -999                -999      0.019681574713      0.011236186889                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   3            26788807      0.000193207203      0.850000000000          5000000.00      3.250000000000      0.606392948837      0.034040402634     -0.106284285384                -999                -999                -999      0.022889398902      0.011151003732                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   3            26796435      0.000193179701      0.850000000000          5000000.00      3.500000000000      0.629790517332      0.037598157300     -0.103543457393                -999                -999                -999      0.026534465041      0.011063692259                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   3            26806408      0.000193143763      0.850000000000          5000000.00      3.750000000000      0.649011380011      0.041490797550     -0.097886370568                -999                -999                -999      0.030510593290      0.010980204260                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   3            26812752      0.000193120912      0.850000000000          5000000.00      4.000000000000      0.666305413218      0.045630673374     -0.090979423287                -999                -999                -999      0.034730751716      0.010899921658                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   3            26802942      0.000193156251      0.850000000000          5000000.00      4.250000000000      0.682550942126      0.049952413692     -0.083813507518                -999                -999                -999      0.039128085739      0.010824327953                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="003.01 CRM-WB GRID LEVEL 4"
+AUXDATA Tstatic         = "-999"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "Helden_Grids.REV00"
+AUXDATA Misc            = ""
+                   4                   0      0.000000000000      0.850000000000          5000000.00      2.500000000000      0.000000000000      0.000000000000      0.000000000000                -999                -999                -999      0.000000000000      0.000000000000                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="003.01 CRM-WB GRID LEVEL 5"
+AUXDATA Tstatic         = "-999"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "Helden_Grids.REV00"
+AUXDATA Misc            = ""
+                   5                   0      0.000000000000      0.850000000000          5000000.00      2.500000000000      0.000000000000      0.000000000000      0.000000000000                -999                -999                -999      0.000000000000      0.000000000000                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="003.01 CRM-WB GRID LEVEL 6"
+AUXDATA Tstatic         = "-999"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "Helden_Grids.REV00"
+AUXDATA Misc            = ""
+                   6                   0      0.000000000000      0.850000000000          5000000.00      2.500000000000      0.000000000000      0.000000000000      0.000000000000                -999                -999                -999      0.000000000000      0.000000000000                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+
+ZONE T="003.01 CRM-WB ALPHA 2.50"
+AUXDATA Tstatic         = "-999"
+AUXDATA Deltat          = "-999"
+AUXDATA GridFileName    = "Helden_Grids.REV00"
+AUXDATA Misc            = ""
+                   1             3683140      0.000521063781      0.850000000000          5000000.00      2.500000000000      0.503327967853      0.026580687051     -0.093834356999                -999                -999                -999      0.015287480055      0.011293206996                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   2             8333026      0.000346416549      0.850000000000          5000000.00      2.500000000000      0.505707852223      0.026205611851     -0.094857101532                -999                -999                -999      0.014871514816      0.011334097035                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   3            26772535      0.000193265908      0.850000000000          5000000.00      2.500000000000      0.508275470516      0.026059612470     -0.096333359557                -999                -999                -999      0.014689414566      0.011370197904                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   4            61997914      0.000127002264      0.850000000000          5000000.00      2.500000000000      0.509610411805      0.026033534540     -0.097012370297                -999                -999                -999      0.014648881668      0.011384652872                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
+                   5           205726073      0.000069719671      0.850000000000          5000000.00      2.500000000000      0.510137355896      0.026005635247     -0.097331737683                -999                -999                -999      0.014609483158      0.011396152090                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999                -999
