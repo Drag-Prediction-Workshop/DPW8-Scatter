@@ -82,15 +82,15 @@ VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"   "CL_
 #   PARTICIPANT, GRID, AND SOLVER INFORMATION
 #---------------------------------------------------
 DATASETAUXDATA ParticipantID   = "001"
-DATASETAUXDATA SubmissionDate  = "29/05/2026"
+DATASETAUXDATA SubmissionDate  = "26/06/2025"
 DATASETAUXDATA Name            = "Matthew Wernham"
 DATASETAUXDATA Email           = "Matthew2.Wernham@live.uwe.ac.uk"
 DATASETAUXDATA Institution     = "University of the West of England"
 DATASETAUXDATA SolverName      = "Fluent 2024 R2"
 DATASETAUXDATA BasicAlgorithm  = "RANS"
 DATASETAUXDATA TurbulenceModel = "SA"
-DATASETAUXDATA GridId          = "structured quad"
-DATASETAUXDATA Notes           = ""
+DATASETAUXDATA GridId          = "Multiblock, Overset, Hex, Hybrid, Prism, Custom, etc."
+DATASETAUXDATA Notes           = "Any thing else you would like to add"
 
 
 #-------------------------------------------------------------------------------
