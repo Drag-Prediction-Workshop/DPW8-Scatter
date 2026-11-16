@@ -82,14 +82,14 @@ VARIABLES = "GRID_LEVEL"  "GRID_SIZE"  "GRID_FAC"  "MACH"  "REY"  "ALPHA"   "CL_
 #   PARTICIPANT, GRID, AND SOLVER INFORMATION
 #---------------------------------------------------
 DATASETAUXDATA ParticipantID   = "040"
-DATASETAUXDATA SubmissionDate  = "04/11/2026"
+DATASETAUXDATA SubmissionDate  = "15/11/2026"
 DATASETAUXDATA Name            = "Paul Canoville"
 DATASETAUXDATA Email           = "paul.canoville@qinetiq.com"
 DATASETAUXDATA Institution     = "QinetiQ"
 DATASETAUXDATA SolverName      = "Density Based (2026 R1)"
 DATASETAUXDATA BasicAlgorithm  = "RANS"
 DATASETAUXDATA TurbulenceModel = "SA"
-DATASETAUXDATA GridId          = "ONERA-OAT15A_Cadence_Unstructured_REV02"
+DATASETAUXDATA GridId          = "ONERA-OAT15A_Cadence_Structured_REV02"
 DATASETAUXDATA Notes           = ""
 
 
